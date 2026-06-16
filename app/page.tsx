@@ -1,5 +1,6 @@
 import { AnimatedMain } from "@/components/animated-main";
 import { MagneticButton } from "@/components/magnetic-button";
+import { TrackedLink } from "@/components/tracked-link";
 
 const projects = [
   {
@@ -174,11 +175,11 @@ export default function Home() {
             interminables.
           </p>
           <div className="actions">
-            <MagneticButton className="button primary" href="#work">
+            <MagneticButton className="button primary" href="#work" gaEvent="ver_proyectos" gaParams={{ location: "hero" }}>
               Ver proyectos
               <span aria-hidden="true">-&gt;</span>
             </MagneticButton>
-            <MagneticButton className="button secondary" href="mailto:migvaronag@gmail.com">
+            <MagneticButton className="button secondary" href="mailto:migvaronag@gmail.com" gaEvent="cta_click" gaParams={{ location: "hero" }}>
               Solicitar presupuesto
             </MagneticButton>
           </div>
@@ -239,9 +240,9 @@ export default function Home() {
                 <p className="project-stack">{project.stack}</p>
                 <div className="project-links">
                   {project.links.map((link) => (
-                    <a href={link.href} key={link.href} target="_blank" rel="noreferrer">
+                    <TrackedLink href={link.href} key={link.href} target="_blank" rel="noreferrer" gaEvent="project_click" gaParams={{ project: project.name, label: link.label }}>
                       {link.label} <span aria-hidden="true">↗</span>
-                    </a>
+                    </TrackedLink>
                   ))}
                 </div>
               </div>
@@ -275,9 +276,9 @@ export default function Home() {
               </ul>
               <div className="service-footer">
                 <span className="service-time">{service.time}</span>
-                <a href="mailto:migvaronag@gmail.com" className="service-cta">
+                <TrackedLink href="mailto:migvaronag@gmail.com" className="service-cta" gaEvent="cta_click" gaParams={{ location: "servicios", service: service.name }}>
                   Solicitar presupuesto <span aria-hidden="true">→</span>
-                </a>
+                </TrackedLink>
               </div>
             </div>
           ))}
@@ -323,9 +324,9 @@ export default function Home() {
         <p className="footer-eyebrow">Listo para empezar</p>
         <h2>Cuentame tu proyecto. Tienes propuesta en 48 horas.</h2>
         <p>Web, SaaS, dashboard, plataforma o integracion a medida. Sin compromiso inicial.</p>
-        <a href="mailto:migvaronag@gmail.com" className="footer-cta">
+        <TrackedLink href="mailto:migvaronag@gmail.com" className="footer-cta" gaEvent="cta_click" gaParams={{ location: "footer" }}>
           Solicitar presupuesto gratuito <span aria-hidden="true">→</span>
-        </a>
+        </TrackedLink>
       </footer>
     </AnimatedMain>
   );

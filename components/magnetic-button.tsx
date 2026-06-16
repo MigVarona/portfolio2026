@@ -3,6 +3,7 @@
 import { useRef, type ReactNode } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { sendGAEvent } from "@next/third-parties/google";
 
 gsap.registerPlugin(useGSAP);
 
@@ -10,9 +11,11 @@ type MagneticButtonProps = {
   href: string;
   className: string;
   children: ReactNode;
+  gaEvent?: string;
+  gaParams?: Record<string, string>;
 };
 
-export function MagneticButton({ href, className, children }: MagneticButtonProps) {
+export function MagneticButton({ href, className, children, gaEvent, gaParams }: MagneticButtonProps) {
   const buttonRef = useRef<HTMLAnchorElement>(null);
 
   useGSAP(
@@ -56,7 +59,12 @@ export function MagneticButton({ href, className, children }: MagneticButtonProp
   );
 
   return (
-    <a ref={buttonRef} href={href} className={className}>
+    <a
+      ref={buttonRef}
+      href={href}
+      className={className}
+      onClick={() => gaEvent && sendGAEvent("event", gaEvent, gaParams ?? {})}
+    >
       {children}
     </a>
   );
