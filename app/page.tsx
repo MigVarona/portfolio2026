@@ -78,7 +78,6 @@ const capabilities = [
 ];
 
 const heroStats = [
-  { value: "10+", label: "productos y webs lanzados" },
   { value: "Full-stack", label: "de la UI a las integraciones" },
   { value: "Madrid / remoto", label: "colaboracion flexible" },
 ];
