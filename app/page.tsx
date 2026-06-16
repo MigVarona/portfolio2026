@@ -1,3 +1,6 @@
+import { AnimatedMain } from "@/components/animated-main";
+import { MagneticButton } from "@/components/magnetic-button";
+
 const projects = [
   {
     number: "01",
@@ -89,7 +92,7 @@ const stack = [
 
 export default function Home() {
   return (
-    <main>
+    <AnimatedMain>
       <header className="nav">
         <a className="brand" href="#top" aria-label="Inicio">
           Miguel Varona
@@ -111,13 +114,13 @@ export default function Home() {
             despliegue y crecimiento.
           </p>
           <div className="actions">
-            <a className="button primary" href="#work">
+            <MagneticButton className="button primary" href="#work">
               Ver proyectos
               <span aria-hidden="true">-&gt;</span>
-            </a>
-            <a className="button secondary" href="mailto:migvaronag@gmail.com">
+            </MagneticButton>
+            <MagneticButton className="button secondary" href="mailto:migvaronag@gmail.com">
               Hablemos
-            </a>
+            </MagneticButton>
           </div>
         </div>
 
@@ -244,6 +247,6 @@ export default function Home() {
         <p>Desarrollo web, SaaS, dashboards, sistemas de reservas e integraciones a medida.</p>
         <a href="mailto:migvaronag@gmail.com">migvaronag@gmail.com</a>
       </footer>
-    </main>
+    </AnimatedMain>
   );
 }

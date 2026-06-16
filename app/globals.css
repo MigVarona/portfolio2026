@@ -86,6 +86,17 @@ p {
   background: rgba(251, 247, 238, 0.72);
   backdrop-filter: blur(18px);
   box-shadow: 0 10px 30px rgba(14, 15, 16, 0.04);
+  will-change: transform;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background-color 0.35s ease;
+}
+
+.nav.is-scrolled {
+  transform: scale(0.985);
+  background: rgba(251, 247, 238, 0.92);
+  box-shadow: 0 14px 40px rgba(14, 15, 16, 0.08);
 }
 
 .brand {
@@ -178,8 +189,8 @@ h1 {
   border-radius: 999px;
   font-size: 15px;
   font-weight: 800;
+  will-change: transform;
   transition:
-    transform 0.2s ease,
     box-shadow 0.2s ease,
     background-color 0.2s ease;
 }
@@ -477,6 +488,7 @@ footer {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  will-change: transform;
 }
 
 .project-green .project-visual {
