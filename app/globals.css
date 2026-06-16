@@ -114,8 +114,10 @@ p {
 
 .nav nav a {
   color: var(--muted);
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   transition: color 0.2s ease;
 }
 
