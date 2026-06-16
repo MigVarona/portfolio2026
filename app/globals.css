@@ -66,7 +66,8 @@ p {
 .nav,
 .hero,
 .work,
-.about-band,
+.services-section,
+.process-section,
 .stack-section {
   margin: 0 auto;
   width: min(1296px, calc(100% - 48px));
@@ -223,7 +224,6 @@ h1 {
 .hero-stats div,
 .hero-benefits,
 .project,
-.capability-list span,
 .stack-list,
 footer {
   box-shadow: var(--shadow);
@@ -304,7 +304,8 @@ footer {
 }
 
 .work,
-.about-band,
+.services-section,
+.process-section,
 .stack-section {
   padding: 84px 0 96px;
   border-top: 1px solid var(--line);
@@ -500,39 +501,134 @@ footer {
   padding: 52px;
 }
 
-.about-grid {
+.services-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 410px;
-  gap: 36px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
   margin-top: 54px;
 }
 
-.about-copy {
-  display: grid;
-  gap: 22px;
-}
-
-.about-copy p {
-  color: var(--muted);
-  font-size: 24px;
-  line-height: 1.55;
-}
-
-.capability-list {
+.service-card {
   display: grid;
   align-content: start;
-  gap: 12px;
+  gap: 18px;
+  padding: 32px;
+  border: 1px solid rgba(14, 15, 16, 0.08);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow);
 }
 
-.capability-list span {
-  display: block;
-  padding: 18px 20px;
+.service-number {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.service-name {
+  margin: 0;
+  font-size: clamp(22px, 2.4vw, 32px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.service-desc {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.service-features {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-features li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.service-features li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-size: 13px;
+}
+
+.service-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(14, 15, 16, 0.08);
+}
+
+.service-time {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.service-cta {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.service-cta:hover,
+.service-cta:focus-visible {
+  color: var(--green);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 54px;
+}
+
+.process-step {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  padding: 28px;
   border: 1px solid rgba(14, 15, 16, 0.08);
-  border-radius: 20px;
+  border-radius: 28px;
   background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow);
+}
+
+.step-number {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.step-title {
+  margin: 0;
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.step-desc {
   color: var(--muted);
   font-size: 16px;
-  font-weight: 700;
+  line-height: 1.6;
 }
 
 .stack-list {
@@ -615,6 +711,30 @@ footer a:focus-visible {
   text-decoration: underline;
 }
 
+a.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 38px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  background: var(--acid);
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+a.footer-cta:hover,
+a.footer-cta:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(199, 239, 71, 0.32);
+  text-decoration: none;
+}
+
 :focus-visible {
   outline: 2px solid var(--green);
   outline-offset: 3px;
@@ -634,8 +754,12 @@ footer a:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .about-grid {
+  .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .nav {
@@ -647,7 +771,8 @@ footer a:focus-visible {
   .nav,
   .hero,
   .work,
-  .about-band,
+  .services-section,
+  .process-section,
   .stack-section {
     width: min(100% - 28px, 1296px);
   }
@@ -678,10 +803,15 @@ footer a:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero-card,
   .hero-benefits,
   .project,
-  .capability-list span,
+  .service-card,
+  .process-step,
   .stack-list {
     border-radius: 22px;
   }

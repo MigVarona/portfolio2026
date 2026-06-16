@@ -9,7 +9,7 @@ const projects = [
     summary:
       "SaaS B2B para restaurantes con cartas QR dinamicas, reservas online, dashboard de gestion, pagos y extraccion de menus con IA.",
     decision:
-      "No solo construir funcionalidades: convertir una operativa de restaurante en un producto vendible, mantenible y preparado para clientes reales.",
+      "Digitalizar la operativa completa de un restaurante: carta QR dinamica, reservas online y panel centralizado. Un producto real en manos de clientes reales.",
     stack: "Next.js 16 · Supabase · Stripe · OpenAI · TypeScript",
     tags: ["SaaS", "Pagos", "IA"],
     image: "/images/bookarta/logo-crema.png",
@@ -26,7 +26,7 @@ const projects = [
     summary:
       "Plataforma editorial sobre salud basada en evidencia: nutricion, neurociencia, longevidad, newsletter y guias descargables.",
     decision:
-      "Dar forma de producto a contenido experto: identidad sobria, lectura clara y una base preparada para crecer.",
+      "Plataforma con identidad propia, secciones estructuradas y base tecnica lista para escalar sin reescribir nada.",
     stack: "Next.js 15 · MongoDB · TypeScript · shadcn/ui · Tailwind",
     tags: ["Editorial", "Contenido", "Escalable"],
     image: "/images/renew-habits/renew.png",
@@ -40,7 +40,7 @@ const projects = [
     summary:
       "Plataforma para premios audiovisuales con inscripciones publicas, dashboard de revision y portal de votacion para socios.",
     decision:
-      "Ordenar un sistema institucional complejo con navegacion publica, administracion interna y confianza visual.",
+      "Sistema que gestiono inscripciones publicas, revision interna y votacion de socios en un unico flujo sin fricciones.",
     stack: "Next.js · Supabase · TypeScript",
     tags: ["Institucional", "Votaciones", "Admin"],
     image: "/images/amae/amae1.png",
@@ -59,7 +59,7 @@ const projects = [
     summary:
       "Portfolio para editora de video con trabajos para Prime Video, Domestika y Bitvavo. Direccion visual oscura y cinematografica.",
     decision:
-      "Construir una presencia personal que no parezca una plantilla: ritmo, foco en pieza visual y sensacion editorial.",
+      "Una presencia visual que diferencia a la editora del resto: ritmo, foco en la pieza y sensacion cinematografica. No una plantilla.",
     stack: "Next.js 16 · TypeScript · shadcn/ui",
     tags: ["Portfolio", "Visual", "Cinematico"],
     image: "/images/crisgova/crisgova-home.jpg",
@@ -68,18 +68,79 @@ const projects = [
   },
 ];
 
-const capabilities = [
-  "Aplicaciones web full-stack",
-  "Plataformas SaaS y dashboards",
-  "Desarrollo con Next.js / React",
-  "APIs, bases de datos y backend",
-  "E-commerce y sistemas de reservas",
-  "Flujos de producto asistidos por IA",
+const services = [
+  {
+    number: "01",
+    name: "Web de negocio",
+    description:
+      "Para empresas que necesitan presencia profesional online. Landing page, web corporativa o portfolio con diseño cuidado, rendimiento optimizado y despliegue incluido.",
+    features: [
+      "Diseño UI a medida, no plantillas",
+      "Desarrollo full-stack completo",
+      "Formularios, CMS e integraciones basicas",
+      "Despliegue y configuracion de dominio",
+    ],
+    time: "2–3 semanas",
+  },
+  {
+    number: "02",
+    name: "SaaS o plataforma",
+    description:
+      "Para digitalizar un proceso interno o lanzar un producto. Dashboard, reservas, pagos o area privada, con entregas por fases desde la primera semana.",
+    features: [
+      "Definicion de producto y alcance",
+      "Frontend + backend + base de datos",
+      "Pagos, reservas e integraciones de terceros",
+      "Entregas iterativas con revisiones reales",
+    ],
+    time: "4–8 semanas",
+  },
+  {
+    number: "03",
+    name: "Integracion a medida",
+    description:
+      "Para proyectos existentes que necesitan crecer: anadir IA, conectar APIs externas, automatizar procesos o mejorar una parte concreta del producto.",
+    features: [
+      "Analisis tecnico del sistema actual",
+      "Propuesta de alcance en 48 horas",
+      "Implementacion sin romper lo que funciona",
+      "Documentacion y traspaso ordenado",
+    ],
+    time: "Segun alcance",
+  },
+];
+
+const processSteps = [
+  {
+    number: "01",
+    title: "Cuentame tu proyecto",
+    description:
+      "Un email o una llamada de 15 minutos. Sin formularios largos. Solo cuentame que necesitas y que problema quieres resolver.",
+  },
+  {
+    number: "02",
+    title: "Propuesta clara en 48h",
+    description:
+      "Recibes un documento con el alcance exacto, los entregables, el plazo estimado y el coste. Sin letra pequena ni sorpresas.",
+  },
+  {
+    number: "03",
+    title: "Desarrollo por fases",
+    description:
+      "Trabajas con versiones reales desde la primera semana. Revisas, das feedback y ajustamos sobre algo que ya funciona.",
+  },
+  {
+    number: "04",
+    title: "Lanzamiento y soporte",
+    description:
+      "Despliego el producto, configuro dominios y entornos, y me quedo disponible para ajustes tras el lanzamiento.",
+  },
 ];
 
 const heroStats = [
-  { value: "Full-stack", label: "de la UI a las integraciones" },
-  { value: "Madrid / remoto", label: "colaboracion flexible" },
+  { value: "2–8 semanas", label: "desde idea hasta producto lanzado" },
+  { value: "Propuesta", label: "cerrada y clara antes de empezar" },
+  { value: "Full-stack", label: "diseño, codigo y despliegue" },
 ];
 
 const stack = [
@@ -98,19 +159,19 @@ export default function Home() {
         </a>
         <nav aria-label="Principal">
           <a href="#work">Proyectos</a>
-          <a href="#about">Servicios</a>
+          <a href="#services">Servicios</a>
           <a href="mailto:migvaronag@gmail.com">Contacto</a>
         </nav>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Desarrollo web · producto digital · integraciones</p>
-          <h1>Construyo productos digitales con criterio de negocio, diseño y tecnologia.</h1>
+          <p className="eyebrow">Web · SaaS · Dashboards · Integraciones</p>
+          <h1>Tu negocio online, funcionando en semanas.</h1>
           <p className="lead">
-            Soy desarrollador full-stack en Madrid. Trabajo en todo el ciclo
-            de producto: estrategia, interfaz, arquitectura, desarrollo,
-            despliegue y crecimiento.
+            Diseño y desarrollo productos digitales a medida: webs, plataformas y
+            sistemas que resuelven problemas reales sin meses de espera ni procesos
+            interminables.
           </p>
           <div className="actions">
             <MagneticButton className="button primary" href="#work">
@@ -118,23 +179,22 @@ export default function Home() {
               <span aria-hidden="true">-&gt;</span>
             </MagneticButton>
             <MagneticButton className="button secondary" href="mailto:migvaronag@gmail.com">
-              Hablemos
+              Solicitar presupuesto
             </MagneticButton>
           </div>
         </div>
 
         <aside className="hero-panel" aria-label="Resumen">
           <div className="hero-card">
-            <p className="panel-kicker">De idea a producto funcional.</p>
+            <p className="panel-kicker">De idea a producto lanzado.</p>
             <p>
-              Ayudo a convertir necesidades de negocio en productos digitales
-              claros, usables y preparados para crecer: desde la estructura y el
-              diseño hasta el desarrollo full-stack y la integracion con pagos,
-              reservas, bases de datos o IA.
+              Convierto necesidades de negocio en productos digitales funcionales:
+              desde la estructura y el diseño hasta el desarrollo completo y la
+              integracion con pagos, reservas, bases de datos o IA.
             </p>
           </div>
 
-          <div className="hero-stats" aria-label="Resumen rapido">
+          <div className="hero-stats" aria-label="Por que trabajar conmigo">
             {heroStats.map((item) => (
               <div key={item.label}>
                 <strong>{item.value}</strong>
@@ -143,14 +203,10 @@ export default function Home() {
             ))}
           </div>
 
-          <p className="panel-copy">
-            Desarrollo interfaces con criterio visual, arquitectura sencilla de
-            mantener y una ejecucion orientada a negocio.
-          </p>
-          <ul className="hero-benefits" aria-label="Beneficios">
-            <li>Ordenar ideas y convertirlas en una estructura clara.</li>
-            <li>Diseñar interfaces cuidadas, usables y alineadas con negocio.</li>
-            <li>Construir el producto completo: frontend, backend e integraciones.</li>
+          <ul className="hero-benefits" aria-label="Que incluye">
+            <li>Estrategia y definicion del producto antes de escribir codigo.</li>
+            <li>Diseño de interfaces cuidadas, usables y alineadas con negocio.</li>
+            <li>Desarrollo completo: frontend, backend e integraciones.</li>
           </ul>
         </aside>
       </section>
@@ -158,11 +214,11 @@ export default function Home() {
       <section className="work" id="work">
         <div className="section-heading">
           <p className="eyebrow">Trabajo destacado</p>
-          <h2>Software en produccion, presentado como decisiones de producto.</h2>
+          <h2>Proyectos reales en produccion, con resultados medibles.</h2>
           <p>
             Desde plataformas SaaS hasta productos editoriales y sistemas
-            institucionales. Cada proyecto responde a un problema concreto,
-            restricciones reales y una superficie publica funcionando.
+            institucionales. Cada proyecto responde a un problema concreto y
+            tiene una superficie publica funcionando.
           </p>
         </div>
 
@@ -197,31 +253,54 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="about-band" id="about">
+      <section className="services-section" id="services">
         <div className="section-heading">
-          <p className="eyebrow">Para empresas</p>
-          <h2>Diseño y desarrollo productos digitales para empresas que necesitan avanzar rapido.</h2>
+          <p className="eyebrow">Servicios</p>
+          <h2>Elige el tipo de proyecto que necesitas.</h2>
+          <p>
+            Tres enfoques distintos segun el momento en el que esta tu negocio.
+            Cada proyecto tiene su propio presupuesto: lo recibes en 48 horas, sin compromiso.
+          </p>
         </div>
-        <div className="about-grid">
-          <div className="about-copy">
-            <p>
-              Trabajo con empresas, estudios y equipos que
-              necesitan lanzar una web, un SaaS, un dashboard, una plataforma
-              interna o una integracion a medida sin convertir el proceso en
-              meses de reuniones.
-            </p>
-            <p>
-              Puedo entrar en fases tempranas para ordenar la idea y definir el
-              producto, o sumarme a un proyecto existente para diseñar,
-              desarrollar, conectar APIs, mejorar experiencia o preparar una
-              version lista para clientes reales.
-            </p>
-          </div>
-          <div className="capability-list">
-            {capabilities.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-          </div>
+        <div className="services-grid">
+          {services.map((service) => (
+            <div className="service-card" key={service.number}>
+              <span className="service-number">{service.number}</span>
+              <h3 className="service-name">{service.name}</h3>
+              <p className="service-desc">{service.description}</p>
+              <ul className="service-features">
+                {service.features.map((f) => (
+                  <li key={f}>{f}</li>
+                ))}
+              </ul>
+              <div className="service-footer">
+                <span className="service-time">{service.time}</span>
+                <a href="mailto:migvaronag@gmail.com" className="service-cta">
+                  Solicitar presupuesto <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="process-section" id="process">
+        <div className="section-heading">
+          <p className="eyebrow">Proceso</p>
+          <h2>Como funciona trabajar juntos.</h2>
+          <p>
+            Sin reuniones semanales ni metodologias complejas. Un proceso directo
+            que pasa de tu idea a un producto funcionando.
+          </p>
+        </div>
+        <div className="process-grid">
+          {processSteps.map((step) => (
+            <div className="process-step" key={step.number}>
+              <span className="step-number">{step.number}</span>
+              <h3 className="step-title">{step.title}</h3>
+              <p className="step-desc">{step.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -241,10 +320,12 @@ export default function Home() {
       </section>
 
       <footer>
-        <p className="footer-eyebrow">Disponible para nuevos proyectos</p>
-        <h2>Hablemos si necesitas convertir una idea, proceso o servicio en un producto digital.</h2>
-        <p>Desarrollo web, SaaS, dashboards, sistemas de reservas e integraciones a medida.</p>
-        <a href="mailto:migvaronag@gmail.com">migvaronag@gmail.com</a>
+        <p className="footer-eyebrow">Listo para empezar</p>
+        <h2>Cuentame tu proyecto. Tienes propuesta en 48 horas.</h2>
+        <p>Web, SaaS, dashboard, plataforma o integracion a medida. Sin compromiso inicial.</p>
+        <a href="mailto:migvaronag@gmail.com" className="footer-cta">
+          Solicitar presupuesto gratuito <span aria-hidden="true">→</span>
+        </a>
       </footer>
     </AnimatedMain>
   );

@@ -54,7 +54,7 @@ export function AnimatedMain({ children }: AnimatedMainProps) {
             );
 
           gsap.set(
-            ".project, .section-heading, .capability-list span, .about-copy p, .stack-list div, footer > *",
+            ".project, .section-heading, .service-card, .process-step, .stack-list div, footer > *",
             {
               y: 48,
               autoAlpha: 0,
@@ -131,13 +131,13 @@ export function AnimatedMain({ children }: AnimatedMainProps) {
             once: true,
           });
 
-          ScrollTrigger.batch(".about-copy p", {
+          ScrollTrigger.batch(".service-card", {
             onEnter: (elements) => {
               gsap.to(elements, {
                 y: 0,
                 autoAlpha: 1,
-                duration: 0.75,
-                stagger: 0.14,
+                duration: 0.65,
+                stagger: 0.1,
                 ease: "power3.out",
                 overwrite: true,
               });
@@ -146,18 +146,18 @@ export function AnimatedMain({ children }: AnimatedMainProps) {
             once: true,
           });
 
-          ScrollTrigger.batch(".capability-list span", {
+          ScrollTrigger.batch(".process-step", {
             onEnter: (elements) => {
               gsap.to(elements, {
                 y: 0,
                 autoAlpha: 1,
-                duration: 0.55,
-                stagger: 0.07,
+                duration: 0.6,
+                stagger: 0.09,
                 ease: "power2.out",
                 overwrite: true,
               });
             },
-            start: "top 92%",
+            start: "top 90%",
             once: true,
           });
 
