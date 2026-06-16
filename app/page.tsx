@@ -8,6 +8,7 @@ const projects = [
     decision:
       "No solo construir funcionalidades: convertir una operativa de restaurante en un producto vendible, mantenible y preparado para clientes reales.",
     stack: "Next.js 16 · Supabase · Stripe · OpenAI · TypeScript",
+    tags: ["SaaS", "Pagos", "IA"],
     image: "/images/bookarta/logo-crema.png",
     links: [
       { label: "bookarta.es", href: "https://bookarta.es" },
@@ -24,6 +25,7 @@ const projects = [
     decision:
       "Dar forma de producto a contenido experto: identidad sobria, lectura clara y una base preparada para crecer.",
     stack: "Next.js 15 · MongoDB · TypeScript · shadcn/ui · Tailwind",
+    tags: ["Editorial", "Contenido", "Escalable"],
     image: "/images/renew-habits/renew.png",
     links: [{ label: "renew-habits.com", href: "https://www.renew-habits.com/" }],
     tone: "blue",
@@ -37,6 +39,7 @@ const projects = [
     decision:
       "Ordenar un sistema institucional complejo con navegacion publica, administracion interna y confianza visual.",
     stack: "Next.js · Supabase · TypeScript",
+    tags: ["Institucional", "Votaciones", "Admin"],
     image: "/images/amae/amae1.png",
     links: [
       {
@@ -55,6 +58,7 @@ const projects = [
     decision:
       "Construir una presencia personal que no parezca una plantilla: ritmo, foco en pieza visual y sensacion editorial.",
     stack: "Next.js 16 · TypeScript · shadcn/ui",
+    tags: ["Portfolio", "Visual", "Cinematico"],
     image: "/images/crisgova/crisgova-home.jpg",
     links: [{ label: "crisgova.org", href: "https://www.crisgova.org/" }],
     tone: "ink",
@@ -68,6 +72,12 @@ const capabilities = [
   "APIs, bases de datos y backend",
   "E-commerce y sistemas de reservas",
   "Flujos de producto asistidos por IA",
+];
+
+const heroStats = [
+  { value: "10+", label: "productos y webs lanzados" },
+  { value: "Full-stack", label: "de la UI a las integraciones" },
+  { value: "Madrid / remoto", label: "colaboracion flexible" },
 ];
 
 const stack = [
@@ -112,12 +122,28 @@ export default function Home() {
         </div>
 
         <aside className="hero-panel" aria-label="Resumen">
-          <p className="panel-kicker">De idea a producto funcional.</p>
-          <p>
-            Ayudo a convertir necesidades de negocio en productos digitales
-            claros, usables y preparados para crecer: desde la estructura y el
-            diseño hasta el desarrollo full-stack y la integracion con pagos,
-            reservas, bases de datos o IA.
+          <div className="hero-card">
+            <p className="panel-kicker">De idea a producto funcional.</p>
+            <p>
+              Ayudo a convertir necesidades de negocio en productos digitales
+              claros, usables y preparados para crecer: desde la estructura y el
+              diseño hasta el desarrollo full-stack y la integracion con pagos,
+              reservas, bases de datos o IA.
+            </p>
+          </div>
+
+          <div className="hero-stats" aria-label="Resumen rapido">
+            {heroStats.map((item) => (
+              <div key={item.label}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <p className="panel-copy">
+            Desarrollo interfaces con criterio visual, arquitectura sencilla de
+            mantener y una ejecucion orientada a negocio.
           </p>
           <ul className="hero-benefits" aria-label="Beneficios">
             <li>Ordenar ideas y convertirlas en una estructura clara.</li>
@@ -147,6 +173,11 @@ export default function Home() {
                 <p className="project-type">{project.type}</p>
                 <p>{project.summary}</p>
                 <strong>{project.decision}</strong>
+                <div className="project-tags" aria-label="Areas clave">
+                  {project.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
                 <p className="project-stack">{project.stack}</p>
                 <div className="project-links">
                   {project.links.map((link) => (
@@ -208,6 +239,7 @@ export default function Home() {
       </section>
 
       <footer>
+        <p className="footer-eyebrow">Disponible para nuevos proyectos</p>
         <h2>Hablemos si necesitas convertir una idea, proceso o servicio en un producto digital.</h2>
         <p>Desarrollo web, SaaS, dashboards, sistemas de reservas e integraciones a medida.</p>
         <a href="mailto:migvaronag@gmail.com">migvaronag@gmail.com</a>
