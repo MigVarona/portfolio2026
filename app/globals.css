@@ -787,6 +787,10 @@ button.button:disabled {
   border: 0;
 }
 
+.contact-form .choice-fieldset {
+  gap: 14px;
+}
+
 .contact-form span,
 .contact-form legend {
   color: rgba(255, 255, 255, 0.72);
@@ -1011,6 +1015,10 @@ button.button:disabled {
   .contact-form label,
   .contact-form fieldset {
     gap: 7px;
+  }
+
+  .contact-form .choice-fieldset {
+    gap: 10px;
   }
 
   .contact-form span,
