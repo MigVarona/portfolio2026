@@ -791,6 +791,10 @@ button.button:disabled {
   gap: 14px;
 }
 
+.contact-form .choice-fieldset legend {
+  margin-bottom: 8px;
+}
+
 .contact-form span,
 .contact-form legend {
   color: rgba(255, 255, 255, 0.72);
@@ -840,7 +844,7 @@ button.button:disabled {
   display: grid !important;
   grid-template-columns: 18px minmax(0, 1fr);
   align-items: center;
-  column-gap: 14px !important;
+  column-gap: 18px !important;
   min-height: 52px;
   padding: 13px 18px !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
@@ -1021,6 +1025,10 @@ button.button:disabled {
     gap: 10px;
   }
 
+  .contact-form .choice-fieldset legend {
+    margin-bottom: 6px;
+  }
+
   .contact-form span,
   .contact-form legend {
     font-size: 11px;
@@ -1055,7 +1063,7 @@ button.button:disabled {
 
   .check-option,
   .radio-option {
-    column-gap: 12px !important;
+    column-gap: 16px !important;
     min-height: 46px;
     padding: 11px 16px !important;
   }
