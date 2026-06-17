@@ -462,27 +462,49 @@ footer {
 .project-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 16px;
 }
 
 .project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   color: var(--ink);
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.02em;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
 }
 
 .project-links a:hover,
 .project-links a:focus-visible {
+  color: var(--green);
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 
 .project-visual {
+  display: block;
   aspect-ratio: 1.45;
   border: 1px solid rgba(14, 15, 16, 0.08);
   border-radius: 24px;
   overflow: hidden;
   background: rgba(251, 247, 238, 0.92);
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.project-visual:hover,
+.project-visual:focus-visible {
+  border-color: rgba(14, 15, 16, 0.2);
+  box-shadow: 0 18px 48px rgba(14, 15, 16, 0.1);
+  transform: translateY(-2px);
 }
 
 .project-visual img {
@@ -492,6 +514,12 @@ footer {
   object-fit: cover;
   object-position: center;
   will-change: transform;
+  transition: transform 0.35s ease;
+}
+
+.project-visual:hover img,
+.project-visual:focus-visible img {
+  transform: scale(1.015);
 }
 
 .project-green .project-visual {
@@ -501,6 +529,15 @@ footer {
 .project-green .project-visual img {
   object-fit: contain;
   padding: 52px;
+}
+
+.project-ink .project-links a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.project-ink .project-links a:hover,
+.project-ink .project-links a:focus-visible {
+  color: var(--acid);
 }
 
 .services-grid {

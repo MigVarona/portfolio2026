@@ -225,33 +225,44 @@ export default function Home() {
         </div>
 
         <div className="project-list">
-          {projects.map((project) => (
-            <article className={`project project-${project.tone}`} key={project.name}>
-              <div className="project-copy">
-                <span>{project.number}</span>
-                <h3>{project.name}</h3>
-                <p className="project-type">{project.type}</p>
-                <p>{project.summary}</p>
-                <strong>{project.decision}</strong>
-                <div className="project-tags" aria-label="Areas clave">
-                  {project.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
+          {projects.map((project) => {
+            const primaryLink = project.links[0];
+
+            return (
+              <article className={`project project-${project.tone}`} key={project.name}>
+                <div className="project-copy">
+                  <span>{project.number}</span>
+                  <h3>{project.name}</h3>
+                  <p className="project-type">{project.type}</p>
+                  <p>{project.summary}</p>
+                  <strong>{project.decision}</strong>
+                  <div className="project-tags" aria-label="Areas clave">
+                    {project.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                  <p className="project-stack">{project.stack}</p>
+                  <div className="project-links">
+                    {project.links.map((link) => (
+                      <TrackedLink href={link.href} key={link.href} target="_blank" rel="noreferrer" gaEvent="project_click" gaParams={{ project: project.name, label: link.label }}>
+                        {link.label} <span aria-hidden="true">↗</span>
+                      </TrackedLink>
+                    ))}
+                  </div>
                 </div>
-                <p className="project-stack">{project.stack}</p>
-                <div className="project-links">
-                  {project.links.map((link) => (
-                    <TrackedLink href={link.href} key={link.href} target="_blank" rel="noreferrer" gaEvent="project_click" gaParams={{ project: project.name, label: link.label }}>
-                      {link.label} <span aria-hidden="true">↗</span>
-                    </TrackedLink>
-                  ))}
-                </div>
-              </div>
-              <div className="project-visual">
-                <img src={project.image} alt="" />
-              </div>
-            </article>
-          ))}
+                <TrackedLink
+                  href={primaryLink.href}
+                  className="project-visual"
+                  target="_blank"
+                  rel="noreferrer"
+                  gaEvent="project_image_click"
+                  gaParams={{ project: project.name, label: primaryLink.label }}
+                >
+                  <img src={project.image} alt="" />
+                </TrackedLink>
+              </article>
+            );
+          })}
         </div>
       </section>
 
