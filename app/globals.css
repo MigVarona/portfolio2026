@@ -833,11 +833,12 @@ button.button:disabled {
 .check-option,
 .radio-option {
   position: relative;
-  display: flex !important;
+  display: grid !important;
+  grid-template-columns: 18px minmax(0, 1fr);
   align-items: center;
-  gap: 14px !important;
+  column-gap: 18px !important;
   min-height: 52px;
-  padding: 13px 18px !important;
+  padding: 13px 22px !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.06);
@@ -1046,9 +1047,9 @@ button.button:disabled {
 
   .check-option,
   .radio-option {
-    gap: 12px !important;
+    column-gap: 16px !important;
     min-height: 46px;
-    padding: 11px 16px !important;
+    padding: 11px 18px !important;
   }
 
   .form-footer {
