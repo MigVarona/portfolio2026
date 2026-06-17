@@ -169,7 +169,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow">Web · SaaS · Dashboards · Integraciones</p>
-          <h1>Tu negocio online, funcionando en semanas.</h1>
+          <h1>De idea a producto digital funcionando, sin meses de espera.</h1>
           <p className="lead">
             Diseño y desarrollo productos digitales a medida: webs, plataformas y
             sistemas que resuelven problemas reales sin meses de espera ni procesos
@@ -215,12 +215,12 @@ export default function Home() {
 
       <section className="work" id="work">
         <div className="section-heading">
-          <p className="eyebrow">Trabajo destacado</p>
-          <h2>Proyectos reales en produccion, con resultados medibles.</h2>
+          <p className="eyebrow">Casos de producto</p>
+          <h2>Productos digitales llevados a produccion.</h2>
           <p>
-            Desde plataformas SaaS hasta productos editoriales y sistemas
-            institucionales. Cada proyecto responde a un problema concreto y
-            tiene una superficie publica funcionando.
+            SaaS, plataformas editoriales, sistemas institucionales y portfolios
+            construidos con foco en negocio, experiencia de usuario y desarrollo
+            full-stack.
           </p>
         </div>
 
@@ -326,7 +326,16 @@ export default function Home() {
           <p className="footer-eyebrow">Listo para empezar</p>
           <h2>Cuentame tu proyecto. Tienes propuesta en 48 horas.</h2>
           <p>Web, SaaS, dashboard, plataforma o integracion a medida. Sin compromiso inicial.</p>
-          <a href="mailto:migvaronag@gmail.com">migvaronag@gmail.com</a>
+          <div className="contact-links" aria-label="Contacto directo">
+            <a href="mailto:migvaronag@gmail.com">
+              <span>Email</span>
+              <strong>migvaronag@gmail.com</strong>
+            </a>
+            <a href="tel:+34652592293">
+              <span>Telefono</span>
+              <strong>+34 652 592 293</strong>
+            </a>
+          </div>
         </div>
         <ContactForm />
       </footer>
