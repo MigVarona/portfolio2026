@@ -1,4 +1,5 @@
 import { AnimatedMain } from "@/components/animated-main";
+import { ContactForm } from "@/components/contact-form";
 import { MagneticButton } from "@/components/magnetic-button";
 import { TrackedLink } from "@/components/tracked-link";
 
@@ -161,7 +162,7 @@ export default function Home() {
         <nav aria-label="Principal">
           <a href="#work">Proyectos</a>
           <a href="#services">Servicios</a>
-          <a href="mailto:migvaronag@gmail.com">Contacto</a>
+          <a href="#contacto">Contacto</a>
         </nav>
       </header>
 
@@ -179,7 +180,7 @@ export default function Home() {
               Ver proyectos
               <span aria-hidden="true">-&gt;</span>
             </MagneticButton>
-            <MagneticButton className="button secondary" href="mailto:migvaronag@gmail.com" gaEvent="cta_click" gaParams={{ location: "hero" }}>
+            <MagneticButton className="button secondary" href="#contacto" gaEvent="cta_click" gaParams={{ location: "hero" }}>
               Solicitar presupuesto
             </MagneticButton>
           </div>
@@ -276,7 +277,7 @@ export default function Home() {
               </ul>
               <div className="service-footer">
                 <span className="service-time">{service.time}</span>
-                <TrackedLink href="mailto:migvaronag@gmail.com" className="service-cta" gaEvent="cta_click" gaParams={{ location: "servicios", service: service.name }}>
+                <TrackedLink href="#contacto" className="service-cta" gaEvent="cta_click" gaParams={{ location: "servicios", service: service.name }}>
                   Solicitar presupuesto <span aria-hidden="true">→</span>
                 </TrackedLink>
               </div>
@@ -320,13 +321,14 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <p className="footer-eyebrow">Listo para empezar</p>
-        <h2>Cuentame tu proyecto. Tienes propuesta en 48 horas.</h2>
-        <p>Web, SaaS, dashboard, plataforma o integracion a medida. Sin compromiso inicial.</p>
-        <TrackedLink href="mailto:migvaronag@gmail.com" className="footer-cta" gaEvent="cta_click" gaParams={{ location: "footer" }}>
-          Solicitar presupuesto gratuito <span aria-hidden="true">→</span>
-        </TrackedLink>
+      <footer id="contacto">
+        <div className="footer-copy">
+          <p className="footer-eyebrow">Listo para empezar</p>
+          <h2>Cuentame tu proyecto. Tienes propuesta en 48 horas.</h2>
+          <p>Web, SaaS, dashboard, plataforma o integracion a medida. Sin compromiso inicial.</p>
+          <a href="mailto:migvaronag@gmail.com">migvaronag@gmail.com</a>
+        </div>
+        <ContactForm />
       </footer>
     </AnimatedMain>
   );
