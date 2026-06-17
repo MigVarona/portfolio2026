@@ -36,7 +36,7 @@ export function ContactForm() {
       email: String(formData.get("email") || ""),
       company: String(formData.get("company") || ""),
       services: formData.getAll("services").map(String),
-      interest: String(formData.get("interest") || ""),
+      interest: formData.getAll("interest").map(String).find(Boolean) || "",
       budget: String(formData.get("budget") || ""),
       timeline: String(formData.get("timeline") || ""),
       message: String(formData.get("message") || ""),
@@ -82,7 +82,36 @@ export function ContactForm() {
         <input name="company" type="text" autoComplete="organization" />
       </label>
 
-      <fieldset>
+      <div className="mobile-form-controls">
+        <label>
+          <span>Servicio principal</span>
+          <select name="services" defaultValue="">
+            <option value="" disabled>
+              Selecciona una opcion
+            </option>
+            {serviceOptions.map((service) => (
+              <option key={service} value={service}>
+                {service}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          <span>En que punto estas</span>
+          <select name="interest" defaultValue="">
+            <option value="" disabled>
+              Selecciona una opcion
+            </option>
+            {interestOptions.map((interest) => (
+              <option key={interest} value={interest}>
+                {interest}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      <fieldset className="choice-fieldset">
         <legend>Servicios que te interesan</legend>
         <div className="option-grid">
           {serviceOptions.map((service) => (
@@ -94,7 +123,7 @@ export function ContactForm() {
         </div>
       </fieldset>
 
-      <fieldset>
+      <fieldset className="choice-fieldset">
         <legend>En que punto estas</legend>
         <div className="radio-grid">
           {interestOptions.map((interest) => (

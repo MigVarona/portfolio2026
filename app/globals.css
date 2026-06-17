@@ -773,6 +773,10 @@ button.button:disabled {
   gap: 14px;
 }
 
+.mobile-form-controls {
+  display: none;
+}
+
 .contact-form label,
 .contact-form fieldset {
   display: grid;
@@ -998,13 +1002,46 @@ button.button:disabled {
   }
 
   .contact-form {
-    padding: 18px;
+    gap: 12px;
+    padding: 16px;
     border-radius: 22px;
   }
 
-  .form-grid,
-  .option-grid {
+  .contact-form label,
+  .contact-form fieldset {
+    gap: 7px;
+  }
+
+  .contact-form span,
+  .contact-form legend {
+    font-size: 11px;
+    letter-spacing: 0.07em;
+  }
+
+  .contact-form input,
+  .contact-form select {
+    min-height: 44px;
+    border-radius: 14px;
+    font-size: 14px;
+  }
+
+  .contact-form textarea {
+    min-height: 116px;
+    border-radius: 14px;
+    font-size: 14px;
+  }
+
+  .form-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-form .choice-fieldset {
+    display: none;
+  }
+
+  .mobile-form-controls {
+    display: grid;
+    gap: 12px;
   }
 
   .form-footer {
