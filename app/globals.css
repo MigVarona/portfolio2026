@@ -230,7 +230,7 @@ h1 {
 
 .hero-panel {
   display: grid;
-  align-content: end;
+  align-content: center;
   gap: 18px;
   padding: 12px 0 0;
 }
@@ -544,6 +544,11 @@ footer {
   padding: 52px;
 }
 
+.project-clay .project-visual img {
+  object-fit: contain;
+  object-position: center;
+}
+
 .project-ink .project-links a {
   color: rgba(255, 255, 255, 0.75);
 }
@@ -735,6 +740,18 @@ footer {
   top: 112px;
 }
 
+.footer-logo-wrap {
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+
+.footer-logo {
+  display: block;
+  height: 130px;
+  width: auto;
+  transform: translateX(-65px);
+}
+
 .footer-eyebrow {
   color: rgba(255, 255, 255, 0.72);
   font-size: 12px;
@@ -836,6 +853,71 @@ a.footer-cta:focus-visible {
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(199, 239, 71, 0.32);
   text-decoration: none;
+}
+
+.bottom-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 32px max(24px, calc((100vw - 1296px) / 2)) 28px;
+  background: var(--acid);
+  color: var(--ink);
+}
+
+.bottom-footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 22px;
+  border-bottom: 1.5px solid rgba(14, 15, 16, 0.18);
+  margin-bottom: 22px;
+}
+
+.bottom-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom-footer-brand {
+  display: flex;
+  align-items: center;
+  color: var(--ink);
+}
+
+.bottom-footer-tagline {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(14, 15, 16, 0.52);
+}
+
+.bottom-footer nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.bottom-footer nav a {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  transition: opacity 0.2s ease;
+}
+
+.bottom-footer nav a:hover,
+.bottom-footer nav a:focus-visible {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.bottom-footer-bottom > p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(14, 15, 16, 0.48);
 }
 
 button.button {
@@ -1177,5 +1259,24 @@ button.button:disabled {
   .form-footer .button {
     justify-content: center;
     width: 100%;
+  }
+
+  .bottom-footer {
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  .bottom-footer-top {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .bottom-footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .bottom-footer nav {
+    gap: 20px;
   }
 }

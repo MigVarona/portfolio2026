@@ -28,7 +28,7 @@ const projects = [
     summary:
       "Plataforma editorial sobre salud basada en evidencia: nutricion, neurociencia, longevidad, newsletter y guias descargables.",
     decision:
-      "Plataforma con identidad propia, secciones estructuradas y base tecnica lista para escalar sin reescribir nada.",
+      "Construida para monetizar: arquitectura orientada a conversión con marketing de afiliados y Google Ads como motores de ingresos.",
     stack: "Next.js 15 · MongoDB · TypeScript · shadcn/ui · Tailwind",
     tags: ["Editorial", "Contenido", "Escalable"],
     image: "/images/renew-habits/renew.png",
@@ -42,10 +42,10 @@ const projects = [
     summary:
       "Plataforma para premios audiovisuales con inscripciones publicas, dashboard de revision y portal de votacion para socios.",
     decision:
-      "Sistema que gestiono inscripciones publicas, revision interna y votacion de socios en un unico flujo sin fricciones.",
+      "El reto: tres roles distintos —publico general, equipo de revision y socios votantes— con accesos separados y flujos independientes, todo en un solo sistema sin duplicar complejidad tecnica.",
     stack: "Next.js · Supabase · TypeScript",
     tags: ["Institucional", "Votaciones", "Admin"],
-    image: "/images/amae/amae1.png",
+    image: "/images/amae/iPhone-14-PRO-www.premiosamae.com.webp",
     links: [
       {
         label: "Premios AMAE",
@@ -115,9 +115,9 @@ const services = [
 const processSteps = [
   {
     number: "01",
-    title: "Cuentame tu proyecto",
+    title: "Cuentanos tu proyecto",
     description:
-      "Un email o una llamada de 15 minutos. Sin formularios largos. Solo cuentame que necesitas y que problema quieres resolver.",
+      "Un email o una llamada de 15 minutos. Sin formularios largos. Solo cuentanos que necesitas y que problema quieres resolver.",
   },
   {
     number: "02",
@@ -135,7 +135,7 @@ const processSteps = [
     number: "04",
     title: "Lanzamiento y soporte",
     description:
-      "Despliego el producto, configuro dominios y entornos, y me quedo disponible para ajustes tras el lanzamiento.",
+      "Desplegamos el producto, configuramos dominios y entornos, y nos quedamos disponibles para ajustes tras el lanzamiento.",
   },
 ];
 
@@ -157,13 +157,7 @@ export default function Home() {
     <AnimatedMain>
       <header className="nav">
         <a className="brand" href="#top" aria-label="Inicio">
-          <svg className="brand-mark" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-            <rect x="0" y="0" width="8" height="8" rx="1.5" fill="var(--ink)"/>
-            <rect x="10" y="0" width="8" height="8" rx="1.5" fill="var(--ink)"/>
-            <rect x="0" y="10" width="8" height="8" rx="1.5" fill="var(--ink)"/>
-            <rect x="10" y="10" width="8" height="8" rx="1.5" fill="var(--acid)"/>
-          </svg>
-          Varona <span className="brand-sub">Studio</span>
+          <img src="/images/logos/wearecapa_header.svg" alt="WEARECAPA" height="26" />
         </a>
         <nav aria-label="Principal">
           <a href="#work">Proyectos</a>
@@ -177,7 +171,7 @@ export default function Home() {
           <p className="eyebrow">Web · SaaS · Dashboards · Integraciones</p>
           <h1>De idea a producto digital funcionando, sin meses de espera.</h1>
           <p className="lead">
-            Diseño y desarrollo productos digitales a medida: webs, plataformas y
+            Diseñamos y desarrollamos productos digitales a medida: webs, plataformas y
             sistemas que resuelven problemas reales sin meses de espera ni procesos
             interminables.
           </p>
@@ -196,13 +190,13 @@ export default function Home() {
           <div className="hero-card">
             <p className="panel-kicker">De idea a producto lanzado.</p>
             <p>
-              Convierto necesidades de negocio en productos digitales funcionales:
-              desde la estructura y el diseño hasta el desarrollo completo y la
+              Convertimos necesidades de negocio en productos digitales funcionales:
+              desde la estrategia y el diseño hasta el desarrollo completo y la
               integracion con pagos, reservas, bases de datos o IA.
             </p>
           </div>
 
-          <div className="hero-stats" aria-label="Por que trabajar conmigo">
+          <div className="hero-stats" aria-label="Por que trabajar con nosotros">
             {heroStats.map((item) => (
               <div key={item.label}>
                 <strong>{item.value}</strong>
@@ -340,8 +334,11 @@ export default function Home() {
 
       <footer id="contacto">
         <div className="footer-copy">
+          <div className="footer-logo-wrap">
+            <img src="/images/logos/wearecapa_logo_horizontal_negative.svg" alt="WEARECAPA" className="footer-logo" />
+          </div>
           <p className="footer-eyebrow">Listo para empezar</p>
-          <h2>Cuentame tu proyecto. Tienes propuesta en 48 horas.</h2>
+          <h2>Cuentanos tu proyecto. Tienes propuesta en 48 horas.</h2>
           <p>Web, SaaS, dashboard, plataforma o integracion a medida. Sin compromiso inicial.</p>
           <div className="contact-links" aria-label="Contacto directo">
             <a href="mailto:migvaronag@gmail.com">
@@ -356,6 +353,23 @@ export default function Home() {
         </div>
         <ContactForm />
       </footer>
+
+      <div className="bottom-footer">
+        <div className="bottom-footer-top">
+          <a className="bottom-footer-brand" href="#top" aria-label="Volver al inicio">
+            <img src="/images/logos/wearecapa_header.svg" alt="WEARECAPA" height="36" />
+          </a>
+          <span className="bottom-footer-tagline">Digital Product Consultancy</span>
+        </div>
+        <div className="bottom-footer-bottom">
+          <nav aria-label="Footer">
+            <a href="#work">Proyectos</a>
+            <a href="#services">Servicios</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+          <p>© 2025 WEARECAPA</p>
+        </div>
+      </div>
     </AnimatedMain>
   );
 }

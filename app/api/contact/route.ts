@@ -86,7 +86,7 @@ export async function POST(request: Request) {
   });
 
   await transporter.sendMail({
-    from: `"Varona Studio" <${gmailUser}>`,
+    from: `"WEARECAPA" <${gmailUser}>`,
     to,
     replyTo: `${name} <${email}>`,
     subject: `Nueva consulta desde portfolio: ${name}`,
