@@ -11,10 +11,10 @@ const projects = [
     summary:
       "SaaS B2B para restaurantes con cartas QR dinamicas, reservas online, dashboard de gestion, pagos y extraccion de menus con IA.",
     decision:
-      "Digitalizar la operativa completa de un restaurante: carta QR dinamica, reservas online y panel centralizado. Un producto real en manos de clientes reales.",
+      "Del concepto a un SaaS en produccion con clientes activos: carta QR, reservas, pagos y panel centralizado. Lanzado en España y Europa con ingresos recurrentes desde el primer mes.",
     stack: "Next.js 16 · Supabase · Stripe · OpenAI · TypeScript",
     tags: ["SaaS", "Pagos", "IA"],
-    image: "/images/bookarta/logo-crema.png",
+    image: "/images/bookarta/bookarta.png",
     links: [
       { label: "bookarta.es", href: "https://bookarta.es" },
       { label: "bookarta.eu", href: "https://bookarta.eu" },
@@ -31,7 +31,7 @@ const projects = [
       "Construida para monetizar: arquitectura orientada a conversión con marketing de afiliados y Google Ads como motores de ingresos.",
     stack: "Next.js 15 · MongoDB · TypeScript · shadcn/ui · Tailwind",
     tags: ["Editorial", "Contenido", "Escalable"],
-    image: "/images/renew-habits/renew.png",
+    image: "/images/renew-habits/renew4.png",
     links: [{ label: "renew-habits.com", href: "https://www.renew-habits.com/" }],
     tone: "blue",
   },
@@ -45,7 +45,7 @@ const projects = [
       "El reto: tres roles distintos —publico general, equipo de revision y socios votantes— con accesos separados y flujos independientes, todo en un solo sistema sin duplicar complejidad tecnica.",
     stack: "Next.js · Supabase · TypeScript",
     tags: ["Institucional", "Votaciones", "Admin"],
-    image: "/images/amae/iPhone-14-PRO-www.premiosamae.com.webp",
+    image: "/images/amae/amae4.png",
     links: [
       {
         label: "Premios AMAE",
@@ -64,7 +64,7 @@ const projects = [
       "Una presencia visual que diferencia a la editora del resto: ritmo, foco en la pieza y sensacion cinematografica. No una plantilla.",
     stack: "Next.js 16 · TypeScript · shadcn/ui",
     tags: ["Portfolio", "Visual", "Cinematico"],
-    image: "/images/crisgova/crisgova-home.jpg",
+    image: "/images/crisgova/crisgova.png",
     links: [{ label: "crisgova.org", href: "https://www.crisgova.org/" }],
     tone: "ink",
   },

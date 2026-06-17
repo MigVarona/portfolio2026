@@ -23,6 +23,7 @@ type SubmitState = "idle" | "sending" | "success" | "error";
 export function ContactForm() {
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [feedback, setFeedback] = useState("");
+  const [userName, setUserName] = useState("");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -55,13 +56,35 @@ export function ContactForm() {
         throw new Error(data.message || "No se pudo enviar el formulario.");
       }
 
+      setUserName(String(formData.get("name") || "").split(" ")[0]);
       form.reset();
       setSubmitState("success");
-      setFeedback("Mensaje enviado. Te respondere lo antes posible.");
     } catch (error) {
       setSubmitState("error");
       setFeedback(error instanceof Error ? error.message : "No se pudo enviar el formulario.");
     }
+  }
+
+  if (submitState === "success") {
+    return (
+      <div className="form-success" role="status">
+        <div className="form-success-check">
+          <svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" stroke="var(--acid)" strokeWidth="2.5" className="check-circle" />
+            <path d="M18 32 L27 41 L46 22" stroke="var(--acid)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="check-path" />
+          </svg>
+        </div>
+        <h3 className="form-success-title">
+          Recibido{userName ? `, ${userName}` : ""}.
+        </h3>
+        <p className="form-success-body">
+          Analizamos tu proyecto y tienes una propuesta en tu bandeja antes de 48 horas.
+        </p>
+        <a href="mailto:migvaronag@gmail.com" className="form-success-email">
+          migvaronag@gmail.com
+        </a>
+      </div>
+    );
   }
 
   return (
