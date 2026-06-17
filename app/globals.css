@@ -101,9 +101,22 @@ p {
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
   font-size: 16px;
   font-weight: 800;
   letter-spacing: -0.02em;
+}
+
+.brand-mark {
+  flex-shrink: 0;
+}
+
+.brand-sub {
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0;
 }
 
 .nav nav {

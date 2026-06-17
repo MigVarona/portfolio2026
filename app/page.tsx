@@ -157,7 +157,13 @@ export default function Home() {
     <AnimatedMain>
       <header className="nav">
         <a className="brand" href="#top" aria-label="Inicio">
-          Miguel Varona
+          <svg className="brand-mark" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <rect x="0" y="0" width="8" height="8" rx="1.5" fill="var(--ink)"/>
+            <rect x="10" y="0" width="8" height="8" rx="1.5" fill="var(--ink)"/>
+            <rect x="0" y="10" width="8" height="8" rx="1.5" fill="var(--ink)"/>
+            <rect x="10" y="10" width="8" height="8" rx="1.5" fill="var(--acid)"/>
+          </svg>
+          Varona <span className="brand-sub">Studio</span>
         </a>
         <nav aria-label="Principal">
           <a href="#work">Proyectos</a>
