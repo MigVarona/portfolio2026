@@ -827,7 +827,7 @@ button.button:disabled {
 }
 
 .option-grid {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .check-option,
@@ -836,9 +836,9 @@ button.button:disabled {
   display: grid !important;
   grid-template-columns: 18px minmax(0, 1fr);
   align-items: center;
-  column-gap: 18px !important;
+  column-gap: 14px !important;
   min-height: 52px;
-  padding: 13px 22px !important;
+  padding: 13px 18px !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.06);
@@ -1047,9 +1047,9 @@ button.button:disabled {
 
   .check-option,
   .radio-option {
-    column-gap: 16px !important;
+    column-gap: 12px !important;
     min-height: 46px;
-    padding: 11px 18px !important;
+    padding: 11px 16px !important;
   }
 
   .form-footer {
