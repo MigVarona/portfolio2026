@@ -1,4 +1,5 @@
 import { AnimatedMain } from "@/components/animated-main";
+import { ContactForm } from "@/components/contact-form";
 import { MagneticButton } from "@/components/magnetic-button";
 import { TrackedLink } from "@/components/tracked-link";
 
@@ -10,10 +11,10 @@ const projects = [
     summary:
       "SaaS B2B para restaurantes con cartas QR dinamicas, reservas online, dashboard de gestion, pagos y extraccion de menus con IA.",
     decision:
-      "Digitalizar la operativa completa de un restaurante: carta QR dinamica, reservas online y panel centralizado. Un producto real en manos de clientes reales.",
+      "Del concepto a un SaaS en produccion con clientes activos: carta QR, reservas, pagos y panel centralizado. Lanzado en España y Europa con ingresos recurrentes desde el primer mes.",
     stack: "Next.js 16 · Supabase · Stripe · OpenAI · TypeScript",
     tags: ["SaaS", "Pagos", "IA"],
-    image: "/images/bookarta/logo-crema.png",
+    image: "/images/bookarta/bookarta.png",
     links: [
       { label: "bookarta.es", href: "https://bookarta.es" },
       { label: "bookarta.eu", href: "https://bookarta.eu" },
@@ -27,10 +28,10 @@ const projects = [
     summary:
       "Plataforma editorial sobre salud basada en evidencia: nutricion, neurociencia, longevidad, newsletter y guias descargables.",
     decision:
-      "Plataforma con identidad propia, secciones estructuradas y base tecnica lista para escalar sin reescribir nada.",
+      "Construida para monetizar: arquitectura orientada a conversión con marketing de afiliados y Google Ads como motores de ingresos.",
     stack: "Next.js 15 · MongoDB · TypeScript · shadcn/ui · Tailwind",
     tags: ["Editorial", "Contenido", "Escalable"],
-    image: "/images/renew-habits/renew.png",
+    image: "/images/renew-habits/renew4.png",
     links: [{ label: "renew-habits.com", href: "https://www.renew-habits.com/" }],
     tone: "blue",
   },
@@ -41,10 +42,10 @@ const projects = [
     summary:
       "Plataforma para premios audiovisuales con inscripciones publicas, dashboard de revision y portal de votacion para socios.",
     decision:
-      "Sistema que gestiono inscripciones publicas, revision interna y votacion de socios en un unico flujo sin fricciones.",
+      "El reto: tres roles distintos —publico general, equipo de revision y socios votantes— con accesos separados y flujos independientes, todo en un solo sistema sin duplicar complejidad tecnica.",
     stack: "Next.js · Supabase · TypeScript",
     tags: ["Institucional", "Votaciones", "Admin"],
-    image: "/images/amae/amae1.png",
+    image: "/images/amae/amae4.png",
     links: [
       {
         label: "Premios AMAE",
@@ -63,7 +64,7 @@ const projects = [
       "Una presencia visual que diferencia a la editora del resto: ritmo, foco en la pieza y sensacion cinematografica. No una plantilla.",
     stack: "Next.js 16 · TypeScript · shadcn/ui",
     tags: ["Portfolio", "Visual", "Cinematico"],
-    image: "/images/crisgova/crisgova-home.jpg",
+    image: "/images/crisgova/crisgova.png",
     links: [{ label: "crisgova.org", href: "https://www.crisgova.org/" }],
     tone: "ink",
   },
@@ -114,9 +115,9 @@ const services = [
 const processSteps = [
   {
     number: "01",
-    title: "Cuentame tu proyecto",
+    title: "Cuentanos tu proyecto",
     description:
-      "Un email o una llamada de 15 minutos. Sin formularios largos. Solo cuentame que necesitas y que problema quieres resolver.",
+      "Un email o una llamada de 15 minutos. Sin formularios largos. Solo cuentanos que necesitas y que problema quieres resolver.",
   },
   {
     number: "02",
@@ -134,7 +135,7 @@ const processSteps = [
     number: "04",
     title: "Lanzamiento y soporte",
     description:
-      "Despliego el producto, configuro dominios y entornos, y me quedo disponible para ajustes tras el lanzamiento.",
+      "Desplegamos el producto, configuramos dominios y entornos, y nos quedamos disponibles para ajustes tras el lanzamiento.",
   },
 ];
 
@@ -156,21 +157,21 @@ export default function Home() {
     <AnimatedMain>
       <header className="nav">
         <a className="brand" href="#top" aria-label="Inicio">
-          Miguel Varona
+          <img src="/images/logos/wearecapa_header.svg" alt="WEARECAPA" height="26" />
         </a>
         <nav aria-label="Principal">
           <a href="#work">Proyectos</a>
           <a href="#services">Servicios</a>
-          <a href="mailto:hola@wearecapa.es">Contacto</a>
+          <a href="#contacto">Contacto</a>
         </nav>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow">Web · SaaS · Dashboards · Integraciones</p>
-          <h1>Tu negocio online, funcionando en semanas.</h1>
+          <h1>De idea a producto digital funcionando, sin meses de espera.</h1>
           <p className="lead">
-            Diseño y desarrollo productos digitales a medida: webs, plataformas y
+            Diseñamos y desarrollamos productos digitales a medida: webs, plataformas y
             sistemas que resuelven problemas reales sin meses de espera ni procesos
             interminables.
           </p>
@@ -179,7 +180,7 @@ export default function Home() {
               Ver proyectos
               <span aria-hidden="true">-&gt;</span>
             </MagneticButton>
-            <MagneticButton className="button secondary" href="mailto:hola@wearecapa.es" gaEvent="cta_click" gaParams={{ location: "hero" }}>
+            <MagneticButton className="button secondary" href="#contacto" gaEvent="cta_click" gaParams={{ location: "hero" }}>
               Solicitar presupuesto
             </MagneticButton>
           </div>
@@ -189,13 +190,13 @@ export default function Home() {
           <div className="hero-card">
             <p className="panel-kicker">De idea a producto lanzado.</p>
             <p>
-              Convierto necesidades de negocio en productos digitales funcionales:
-              desde la estructura y el diseño hasta el desarrollo completo y la
+              Convertimos necesidades de negocio en productos digitales funcionales:
+              desde la estrategia y el diseño hasta el desarrollo completo y la
               integracion con pagos, reservas, bases de datos o IA.
             </p>
           </div>
 
-          <div className="hero-stats" aria-label="Por que trabajar conmigo">
+          <div className="hero-stats" aria-label="Por que trabajar con nosotros">
             {heroStats.map((item) => (
               <div key={item.label}>
                 <strong>{item.value}</strong>
@@ -214,43 +215,54 @@ export default function Home() {
 
       <section className="work" id="work">
         <div className="section-heading">
-          <p className="eyebrow">Trabajo destacado</p>
-          <h2>Proyectos reales en produccion, con resultados medibles.</h2>
+          <p className="eyebrow">Casos de producto</p>
+          <h2>Productos digitales llevados a produccion.</h2>
           <p>
-            Desde plataformas SaaS hasta productos editoriales y sistemas
-            institucionales. Cada proyecto responde a un problema concreto y
-            tiene una superficie publica funcionando.
+            SaaS, plataformas editoriales, sistemas institucionales y portfolios
+            construidos con foco en negocio, experiencia de usuario y desarrollo
+            full-stack.
           </p>
         </div>
 
         <div className="project-list">
-          {projects.map((project) => (
-            <article className={`project project-${project.tone}`} key={project.name}>
-              <div className="project-copy">
-                <span>{project.number}</span>
-                <h3>{project.name}</h3>
-                <p className="project-type">{project.type}</p>
-                <p>{project.summary}</p>
-                <strong>{project.decision}</strong>
-                <div className="project-tags" aria-label="Areas clave">
-                  {project.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
+          {projects.map((project) => {
+            const primaryLink = project.links[0];
+
+            return (
+              <article className={`project project-${project.tone}`} key={project.name}>
+                <div className="project-copy">
+                  <span>{project.number}</span>
+                  <h3>{project.name}</h3>
+                  <p className="project-type">{project.type}</p>
+                  <p>{project.summary}</p>
+                  <strong>{project.decision}</strong>
+                  <div className="project-tags" aria-label="Areas clave">
+                    {project.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                  <p className="project-stack">{project.stack}</p>
+                  <div className="project-links">
+                    {project.links.map((link) => (
+                      <TrackedLink href={link.href} key={link.href} target="_blank" rel="noreferrer" gaEvent="project_click" gaParams={{ project: project.name, label: link.label }}>
+                        {link.label} <span aria-hidden="true">↗</span>
+                      </TrackedLink>
+                    ))}
+                  </div>
                 </div>
-                <p className="project-stack">{project.stack}</p>
-                <div className="project-links">
-                  {project.links.map((link) => (
-                    <TrackedLink href={link.href} key={link.href} target="_blank" rel="noreferrer" gaEvent="project_click" gaParams={{ project: project.name, label: link.label }}>
-                      {link.label} <span aria-hidden="true">↗</span>
-                    </TrackedLink>
-                  ))}
-                </div>
-              </div>
-              <div className="project-visual">
-                <img src={project.image} alt="" />
-              </div>
-            </article>
-          ))}
+                <TrackedLink
+                  href={primaryLink.href}
+                  className="project-visual"
+                  target="_blank"
+                  rel="noreferrer"
+                  gaEvent="project_image_click"
+                  gaParams={{ project: project.name, label: primaryLink.label }}
+                >
+                  <img src={project.image} alt="" />
+                </TrackedLink>
+              </article>
+            );
+          })}
         </div>
       </section>
 
@@ -276,7 +288,7 @@ export default function Home() {
               </ul>
               <div className="service-footer">
                 <span className="service-time">{service.time}</span>
-                <TrackedLink href="mailto:hola@wearecapa.es" className="service-cta" gaEvent="cta_click" gaParams={{ location: "servicios", service: service.name }}>
+                <TrackedLink href="#contacto" className="service-cta" gaEvent="cta_click" gaParams={{ location: "servicios", service: service.name }}>
                   Solicitar presupuesto <span aria-hidden="true">→</span>
                 </TrackedLink>
               </div>
@@ -320,15 +332,44 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <p className="footer-eyebrow">Listo para empezar</p>
-        <h2>Cuentame tu proyecto. Tienes propuesta en 48 horas.</h2>
-        <p>Web, SaaS, dashboard, plataforma o integracion a medida. Sin compromiso inicial.</p>
-        <TrackedLink href="mailto:hola@wearecapa.es" className="footer-cta" gaEvent="cta_click" gaParams={{ location: "footer" }}>
-          Solicitar presupuesto gratuito <span aria-hidden="true">→</span>
-        </TrackedLink>
-        <p className="footer-copy">© 2026 Miguel Varona</p>
+      <footer id="contacto">
+        <div className="footer-copy">
+          <div className="footer-logo-wrap">
+            <img src="/images/logos/wearecapa_logo_horizontal_negative.svg" alt="WEARECAPA" className="footer-logo" />
+          </div>
+          <p className="footer-eyebrow">Listo para empezar</p>
+          <h2>Cuentanos tu proyecto. Tienes propuesta en 48 horas.</h2>
+          <p>Web, SaaS, dashboard, plataforma o integracion a medida. Sin compromiso inicial.</p>
+          <div className="contact-links" aria-label="Contacto directo">
+            <a href="mailto:migvaronag@gmail.com">
+              <span>Email</span>
+              <strong>migvaronag@gmail.com</strong>
+            </a>
+            <a href="tel:+34652592293">
+              <span>Telefono</span>
+              <strong>+34 652 592 293</strong>
+            </a>
+          </div>
+        </div>
+        <ContactForm />
       </footer>
+
+      <div className="bottom-footer">
+        <div className="bottom-footer-top">
+          <a className="bottom-footer-brand" href="#top" aria-label="Volver al inicio">
+            <img src="/images/logos/wearecapa_header.svg" alt="WEARECAPA" height="36" />
+          </a>
+          <span className="bottom-footer-tagline">Digital Product Consultancy</span>
+        </div>
+        <div className="bottom-footer-bottom">
+          <nav aria-label="Footer">
+            <a href="#work">Proyectos</a>
+            <a href="#services">Servicios</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+          <p>© 2025 WEARECAPA</p>
+        </div>
+      </div>
     </AnimatedMain>
   );
 }

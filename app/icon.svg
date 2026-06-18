@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="CAPA icon">
+  <rect width="512" height="512" rx="96" fill="#0B0D10"/>
+  <g transform="translate(256 255)" stroke="#FFFFFF" fill="none" stroke-width="16" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M0 -118 L132 -58 L0 2 L-132 -58 Z"/>
+    <path d="M0 -42 L132 18 L0 78 L-132 18 Z"/>
+    <path d="M0 34 L132 94 L0 154 L-132 94 Z"/>
+  </g>
+</svg>

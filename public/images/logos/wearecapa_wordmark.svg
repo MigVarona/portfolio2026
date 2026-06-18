@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="420" viewBox="0 0 1600 420" role="img" aria-label="WEARECAPA logo">
+  <defs>
+    <style>
+      .word-thin {
+        font-family: Inter, Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.16em;
+      }
+      .word-bold {
+        font-family: Inter, Helvetica, Arial, sans-serif;
+        font-weight: 750;
+        letter-spacing: 0.06em;
+      }
+      .tagline {
+        font-family: Inter, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.32em;
+      }
+    </style>
+  </defs>
+  
+  
+  <g transform="translate(800 290)" text-anchor="middle">
+    <text y="0" font-size="156">
+      <tspan class="word-thin" fill="#2C3035">WEARE</tspan><tspan class="word-bold" fill="#0B0D10">CAPA</tspan>
+    </text>
+  </g>
+
+</svg>

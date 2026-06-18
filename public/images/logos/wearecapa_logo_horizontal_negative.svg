@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-label="WEARECAPA logo">
+  <defs>
+    <style>
+      .word-thin {
+        font-family: Inter, Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.16em;
+      }
+      .word-bold {
+        font-family: Inter, Helvetica, Arial, sans-serif;
+        font-weight: 750;
+        letter-spacing: 0.06em;
+      }
+      .tagline {
+        font-family: Inter, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.32em;
+      }
+    </style>
+  </defs>
+  
+  
+  <g transform="translate(800 215)" text-anchor="middle">
+    <text y="0" font-size="132">
+      <tspan class="word-thin" fill="#E9EAEC">WEARE</tspan><tspan class="word-bold" fill="#FFFFFF">CAPA</tspan>
+    </text>
+  </g>
+  <g transform="translate(800 310)" stroke="#E9EAEC" fill="none" stroke-width="3" stroke-linejoin="round">
+    <path d="M0 -34 L42 -15 L0 4 L-42 -15 Z"/>
+    <path d="M0 -10 L42 9 L0 28 L-42 9 Z"/>
+    <path d="M0 14 L42 33 L0 52 L-42 33 Z"/>
+  </g>
+  <line x1="260" y1="315" x2="690" y2="315" stroke="#565D66" stroke-width="2"/>
+  <line x1="910" y1="315" x2="1340" y2="315" stroke="#565D66" stroke-width="2"/>
+  <text x="800" y="410" text-anchor="middle" class="tagline" font-size="32" fill="#E9EAEC">DIGITAL PRODUCT CONSULTANCY</text>
+
+</svg>
