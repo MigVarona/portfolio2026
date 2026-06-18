@@ -723,6 +723,7 @@ footer {
   grid-template-columns: minmax(0, 0.78fr) minmax(360px, 0.72fr);
   gap: 56px;
   align-items: start;
+  overflow-x: clip;
   margin-top: 42px;
   padding: 84px max(24px, calc((100vw - 1296px) / 2)) 92px;
   color: var(--white);
@@ -737,7 +738,6 @@ footer {
 }
 
 .footer-logo-wrap {
-  overflow: hidden;
   margin-bottom: 36px;
 }
 
