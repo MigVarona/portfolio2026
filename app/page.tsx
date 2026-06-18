@@ -75,74 +75,71 @@ const services = [
     number: "01",
     name: "Web de negocio",
     description:
-      "Para empresas que necesitan presencia profesional online. Landing page, web corporativa o portfolio con diseño cuidado, rendimiento optimizado y despliegue incluido.",
-    features: [
-      "Diseño UI a medida, no plantillas",
-      "Desarrollo full-stack completo",
-      "Formularios, CMS e integraciones basicas",
-      "Despliegue y configuracion de dominio",
+      "Para ordenar la presencia digital de una marca, explicar mejor lo que vende y convertir visitas en conversaciones utiles.",
+    outcomes: [
+      "Narrativa, estructura y direccion visual",
+      "Web responsive con rendimiento cuidado",
+      "Formularios, analitica, CMS o integraciones basicas",
     ],
-    time: "2–3 semanas",
+    fit: "Cuando necesitas una web que trabaje mejor para el negocio, no solo una pagina bonita.",
   },
   {
     number: "02",
     name: "SaaS o plataforma",
     description:
-      "Para digitalizar un proceso interno o lanzar un producto. Dashboard, reservas, pagos o area privada, con entregas por fases desde la primera semana.",
-    features: [
-      "Definicion de producto y alcance",
-      "Frontend + backend + base de datos",
-      "Pagos, reservas e integraciones de terceros",
-      "Entregas iterativas con revisiones reales",
+      "Para convertir un proceso, servicio o idea de producto en una herramienta usable por clientes, equipos o usuarios internos.",
+    outcomes: [
+      "Definicion de alcance y flujos principales",
+      "Frontend, backend, base de datos y roles",
+      "Pagos, reservas, dashboards o areas privadas",
     ],
-    time: "4–8 semanas",
+    fit: "Cuando el valor esta en resolver bien un flujo completo, con producto y tecnologia trabajando juntos.",
   },
   {
     number: "03",
     name: "Integracion a medida",
     description:
-      "Para proyectos existentes que necesitan crecer: anadir IA, conectar APIs externas, automatizar procesos o mejorar una parte concreta del producto.",
-    features: [
-      "Analisis tecnico del sistema actual",
-      "Propuesta de alcance en 48 horas",
-      "Implementacion sin romper lo que funciona",
-      "Documentacion y traspaso ordenado",
+      "Para mejorar un sistema que ya existe: conectar herramientas, automatizar partes repetitivas o incorporar IA donde tenga sentido.",
+    outcomes: [
+      "Analisis del sistema actual",
+      "Alcance acotado y plan de implementacion",
+      "Entrega documentada y facil de mantener",
     ],
-    time: "Segun alcance",
+    fit: "Cuando no hace falta rehacerlo todo, sino intervenir con precision.",
   },
 ];
 
 const processSteps = [
   {
     number: "01",
-    title: "Cuentanos tu proyecto",
+    title: "Contexto",
     description:
-      "Un email o una llamada de 15 minutos. Sin formularios largos. Solo cuentanos que necesitas y que problema quieres resolver.",
+      "Entendemos que quieres resolver, para quien, que existe ya y que restricciones reales hay alrededor del proyecto.",
   },
   {
     number: "02",
-    title: "Propuesta clara en 48h",
+    title: "Alcance",
     description:
-      "Recibes un documento con el alcance exacto, los entregables, el plazo estimado y el coste. Sin letra pequena ni sorpresas.",
+      "Aterrizamos prioridades, entregables, fases y presupuesto antes de empezar. Si algo no aporta, se queda fuera.",
   },
   {
     number: "03",
-    title: "Desarrollo por fases",
+    title: "Construccion",
     description:
-      "Trabajas con versiones reales desde la primera semana. Revisas, das feedback y ajustamos sobre algo que ya funciona.",
+      "Diseñamos y desarrollamos con revisiones sobre producto real, manteniendo el foco en decisiones de negocio y experiencia de usuario.",
   },
   {
     number: "04",
-    title: "Lanzamiento y soporte",
+    title: "Salida",
     description:
-      "Desplegamos el producto, configuramos dominios y entornos, y nos quedamos disponibles para ajustes tras el lanzamiento.",
+      "Dejamos el producto desplegado, medible y preparado para evolucionar: dominio, entornos, documentacion y soporte inicial.",
   },
 ];
 
-const heroStats = [
-  { value: "2–8 semanas", label: "desde idea hasta producto lanzado" },
-  { value: "Propuesta", label: "cerrada y clara antes de empezar" },
-  { value: "Full-stack", label: "diseño, codigo y despliegue" },
+const heroPrinciples = [
+  { value: "Producto", label: "antes que acumulacion de pantallas" },
+  { value: "Criterio", label: "para decidir que construir y que dejar fuera" },
+  { value: "Continuidad", label: "desde la idea hasta el lanzamiento" },
 ];
 
 const stack = [
@@ -169,11 +166,11 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow">Web · SaaS · Dashboards · Integraciones</p>
-          <h1>De idea a producto digital funcionando, sin meses de espera.</h1>
+          <h1>Producto digital con criterio, listo para crecer.</h1>
           <p className="lead">
             Diseñamos y desarrollamos productos digitales a medida: webs, plataformas y
-            sistemas que resuelven problemas reales sin meses de espera ni procesos
-            interminables.
+            sistemas que resuelven problemas reales con una mezcla cuidada de estrategia,
+            interfaz y desarrollo full-stack.
           </p>
           <div className="actions">
             <MagneticButton className="button primary" href="#work" gaEvent="ver_proyectos" gaParams={{ location: "hero" }}>
@@ -187,29 +184,22 @@ export default function Home() {
         </div>
 
         <aside className="hero-panel" aria-label="Resumen">
-          <div className="hero-card">
-            <p className="panel-kicker">De idea a producto lanzado.</p>
+          <div className="hero-statement">
+            <p className="panel-kicker">Menos ruido. Mejor producto.</p>
             <p>
-              Convertimos necesidades de negocio en productos digitales funcionales:
-              desde la estrategia y el diseño hasta el desarrollo completo y la
-              integracion con pagos, reservas, bases de datos o IA.
+              Trabajamos con equipos y negocios que necesitan convertir una necesidad
+              concreta en una experiencia digital clara, usable y lista para operar.
             </p>
           </div>
 
-          <div className="hero-stats" aria-label="Por que trabajar con nosotros">
-            {heroStats.map((item) => (
+          <dl className="hero-principles" aria-label="Forma de trabajo">
+            {heroPrinciples.map((item) => (
               <div key={item.label}>
-                <strong>{item.value}</strong>
-                <span>{item.label}</span>
+                <dt>{item.value}</dt>
+                <dd>{item.label}</dd>
               </div>
             ))}
-          </div>
-
-          <ul className="hero-benefits" aria-label="Que incluye">
-            <li>Estrategia y definicion del producto antes de escribir codigo.</li>
-            <li>Diseño de interfaces cuidadas, usables y alineadas con negocio.</li>
-            <li>Desarrollo completo: frontend, backend e integraciones.</li>
-          </ul>
+          </dl>
         </aside>
       </section>
 
@@ -262,31 +252,34 @@ export default function Home() {
 
       <section className="services-section" id="services">
         <div className="section-heading">
-          <p className="eyebrow">Servicios</p>
-          <h2>Elige el tipo de proyecto que necesitas.</h2>
+          <p className="eyebrow">Formas de trabajo</p>
+          <h2>El tipo de ayuda depende del problema.</h2>
           <p>
-            Tres enfoques distintos segun el momento en el que esta tu negocio.
-            Cada proyecto tiene su propio presupuesto: lo recibes en 48 horas, sin compromiso.
+            No todo necesita el mismo proceso ni el mismo nivel de producto. Primero
+            entendemos el contexto; despues definimos una propuesta proporcionada al
+            objetivo, al equipo y al momento del negocio.
           </p>
         </div>
-        <div className="services-grid">
+        <div className="services-list">
           {services.map((service) => (
-            <div className="service-card" key={service.number}>
-              <span className="service-number">{service.number}</span>
-              <h3 className="service-name">{service.name}</h3>
-              <p className="service-desc">{service.description}</p>
-              <ul className="service-features">
-                {service.features.map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
-              </ul>
-              <div className="service-footer">
-                <span className="service-time">{service.time}</span>
+            <article className="service-row" key={service.number}>
+              <div className="service-main">
+                <span className="service-number">{service.number}</span>
+                <h3 className="service-name">{service.name}</h3>
+                <p className="service-desc">{service.description}</p>
+              </div>
+              <div className="service-detail">
+                <ul className="service-outcomes">
+                  {service.outcomes.map((outcome) => (
+                    <li key={outcome}>{outcome}</li>
+                  ))}
+                </ul>
+                <p className="service-fit">{service.fit}</p>
                 <TrackedLink href="#contacto" className="service-cta" gaEvent="cta_click" gaParams={{ location: "servicios", service: service.name }}>
-                  Solicitar presupuesto <span aria-hidden="true">→</span>
+                  Hablar del proyecto <span aria-hidden="true">→</span>
                 </TrackedLink>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
@@ -294,19 +287,19 @@ export default function Home() {
       <section className="process-section" id="process">
         <div className="section-heading">
           <p className="eyebrow">Proceso</p>
-          <h2>Como funciona trabajar juntos.</h2>
+          <h2>Un proceso claro, sin teatralizarlo.</h2>
           <p>
-            Sin reuniones semanales ni metodologias complejas. Un proceso directo
-            que pasa de tu idea a un producto funcionando.
+            El objetivo no es correr por correr. Es tomar buenas decisiones pronto,
+            construir con foco y que cada fase deje algo util para la siguiente.
           </p>
         </div>
-        <div className="process-grid">
+        <div className="process-list">
           {processSteps.map((step) => (
-            <div className="process-step" key={step.number}>
+            <article className="process-line" key={step.number}>
               <span className="step-number">{step.number}</span>
               <h3 className="step-title">{step.title}</h3>
               <p className="step-desc">{step.description}</p>
-            </div>
+            </article>
           ))}
         </div>
       </section>
@@ -332,7 +325,7 @@ export default function Home() {
             <img src="/images/logos/wearecapa_logo_horizontal_negative.svg" alt="WEARECAPA" className="footer-logo" />
           </div>
           <p className="footer-eyebrow">Listo para empezar</p>
-          <h2>Cuentanos tu proyecto. Tienes propuesta en 48 horas.</h2>
+          <h2>Cuentanos tu proyecto. Te devolvemos una propuesta clara.</h2>
           <p>Web, SaaS, dashboard, plataforma o integracion a medida. Sin compromiso inicial.</p>
           <div className="contact-links" aria-label="Contacto directo">
             <a href="mailto:hola@wearecapa.es">

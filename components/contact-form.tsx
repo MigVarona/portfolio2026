@@ -78,10 +78,10 @@ export function ContactForm() {
           Recibido{userName ? `, ${userName}` : ""}.
         </h3>
         <p className="form-success-body">
-          Analizamos tu proyecto y tienes una propuesta en tu bandeja antes de 48 horas.
+          Analizamos el contexto y te responderemos con una propuesta clara para decidir el siguiente paso.
         </p>
-        <a href="mailto:migvaronag@gmail.com" className="form-success-email">
-          migvaronag@gmail.com
+        <a href="mailto:hola@wearecapa.es" className="form-success-email">
+          hola@wearecapa.es
         </a>
       </div>
     );

@@ -48,13 +48,13 @@ export function AnimatedMain({ children }: AnimatedMainProps) {
               "-=0.45",
             )
             .from(
-              ".hero-stats strong",
+              ".hero-principles dt",
               { y: 16, autoAlpha: 0, duration: 0.45, stagger: 0.08 },
               "-=0.35",
             );
 
           gsap.set(
-            ".project, .section-heading, .service-card, .process-step, .stack-list div, footer > *",
+            ".project, .section-heading, .service-row, .process-line, .stack-list div, footer > *",
             {
               y: 48,
               autoAlpha: 0,
@@ -131,7 +131,7 @@ export function AnimatedMain({ children }: AnimatedMainProps) {
             once: true,
           });
 
-          ScrollTrigger.batch(".service-card", {
+          ScrollTrigger.batch(".service-row", {
             onEnter: (elements) => {
               gsap.to(elements, {
                 y: 0,
@@ -146,7 +146,7 @@ export function AnimatedMain({ children }: AnimatedMainProps) {
             once: true,
           });
 
-          ScrollTrigger.batch(".process-step", {
+          ScrollTrigger.batch(".process-line", {
             onEnter: (elements) => {
               gsap.to(elements, {
                 y: 0,
