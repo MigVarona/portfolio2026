@@ -341,9 +341,9 @@ export default function Home() {
           <h2>Cuentanos tu proyecto. Tienes propuesta en 48 horas.</h2>
           <p>Web, SaaS, dashboard, plataforma o integracion a medida. Sin compromiso inicial.</p>
           <div className="contact-links" aria-label="Contacto directo">
-            <a href="mailto:migvaronag@gmail.com">
+            <a href="mailto:hola@wearecapa.es">
               <span>Email</span>
-              <strong>migvaronag@gmail.com</strong>
+              <strong>hola@wearecapa.es</strong>
             </a>
             <a href="tel:+34652592293">
               <span>Telefono</span>
@@ -367,7 +367,7 @@ export default function Home() {
             <a href="#services">Servicios</a>
             <a href="#contacto">Contacto</a>
           </nav>
-          <p>© 2025 WEARECAPA</p>
+          <p>© 2026 WEARECAPA</p>
         </div>
       </div>
     </AnimatedMain>
