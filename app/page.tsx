@@ -236,11 +236,6 @@ export default function Home() {
                   <p className="project-type">{project.type}</p>
                   <p>{project.summary}</p>
                   <strong>{project.decision}</strong>
-                  <div className="project-tags" aria-label="Areas clave">
-                    {project.tags.map((tag) => (
-                      <span key={tag}>{tag}</span>
-                    ))}
-                  </div>
                   <div className="project-links">
                     {project.links.map((link) => (
                       <TrackedLink href={link.href} key={link.href} target="_blank" rel="noreferrer" gaEvent="project_click" gaParams={{ project: project.name, label: link.label }}>
