@@ -737,6 +737,14 @@ a.footer-cta:focus-visible {
   text-decoration: none;
 }
 
+.footer-copy {
+  margin-top: 48px;
+  color: rgba(255, 255, 255, 0.32);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
 :focus-visible {
   outline: 2px solid var(--green);
   outline-offset: 3px;
