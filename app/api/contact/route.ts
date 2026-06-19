@@ -66,11 +66,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "Introduce un email valido." }, { status: 400 });
   }
 
-  const gmailUser = process.env.GMAIL_USER;
-  const gmailAppPassword = process.env.GMAIL_APP_PASSWORD?.replace(/\s/g, "");
-  const to = process.env.CONTACT_TO || gmailUser;
+  const smtpUser = process.env.SMTP_USER;
+  const smtpPass = process.env.SMTP_PASS;
+  const to = process.env.CONTACT_TO || smtpUser;
 
-  if (!gmailUser || !gmailAppPassword || !to) {
+  if (!smtpUser || !smtpPass || !to) {
     return NextResponse.json(
       { message: "El formulario no esta configurado para enviar emails todavia." },
       { status: 500 },
@@ -78,15 +78,17 @@ export async function POST(request: Request) {
   }
 
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.serviciodecorreo.es",
+    port: 465,
+    secure: true,
     auth: {
-      user: gmailUser,
-      pass: gmailAppPassword,
+      user: smtpUser,
+      pass: smtpPass,
     },
   });
 
   await transporter.sendMail({
-    from: `"WEARECAPA" <${gmailUser}>`,
+    from: `"WEARECAPA" <${smtpUser}>`,
     to,
     replyTo: `${name} <${email}>`,
     subject: `Nueva consulta desde portfolio: ${name}`,
