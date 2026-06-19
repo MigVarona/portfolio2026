@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useEffect, useRef, type FormEvent } from "react";
 
 const serviceOptions = [
   "Web corporativa o portfolio",
@@ -24,6 +24,13 @@ export function ContactForm() {
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [feedback, setFeedback] = useState("");
   const [userName, setUserName] = useState("");
+  const successRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (submitState === "success" && successRef.current) {
+      successRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [submitState]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -67,7 +74,7 @@ export function ContactForm() {
 
   if (submitState === "success") {
     return (
-      <div className="form-success" role="status">
+      <div className="form-success" role="status" ref={successRef}>
         <div className="form-success-check">
           <svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-hidden="true">
             <circle cx="32" cy="32" r="30" stroke="var(--acid)" strokeWidth="2.5" className="check-circle" />
