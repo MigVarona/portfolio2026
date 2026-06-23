@@ -1,0 +1,114 @@
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
+
+type ContactPayload = {
+  name?: string;
+  email?: string;
+  services?: string[];
+  interest?: string;
+  timeline?: string;
+  message?: string;
+  website?: string;
+};
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function clean(value?: string) {
+  return value?.trim() || "";
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function renderList(items: string[]) {
+  if (items.length === 0) return "<li>No especificado</li>";
+  return items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+}
+
+export async function POST(request: Request) {
+  let payload: ContactPayload;
+
+  try {
+    payload = (await request.json()) as ContactPayload;
+  } catch {
+    return NextResponse.json({ message: "Solicitud no valida." }, { status: 400 });
+  }
+
+  if (clean(payload.website)) {
+    return NextResponse.json({ message: "Mensaje enviado." });
+  }
+
+  const name = clean(payload.name);
+  const email = clean(payload.email);
+  const interest = clean(payload.interest);
+  const timeline = clean(payload.timeline);
+  const message = clean(payload.message);
+  const services = Array.isArray(payload.services) ? payload.services.map(clean).filter(Boolean) : [];
+
+  if (!name || !email || !interest || !message) {
+    return NextResponse.json(
+      { message: "Completa nombre, email, punto del proyecto y contexto." },
+      { status: 400 },
+    );
+  }
+
+  if (!emailPattern.test(email)) {
+    return NextResponse.json({ message: "Introduce un email valido." }, { status: 400 });
+  }
+
+  const smtpUser = process.env.SMTP_USER;
+  const smtpPass = process.env.SMTP_PASS;
+  const to = process.env.CONTACT_TO || smtpUser;
+
+  if (!smtpUser || !smtpPass || !to) {
+    return NextResponse.json(
+      { message: "El formulario no esta configurado para enviar emails todavia." },
+      { status: 500 },
+    );
+  }
+
+  const transporter = nodemailer.createTransport({
+    host: "smtp.serviciodecorreo.es",
+    port: 465,
+    secure: true,
+    auth: {
+      user: smtpUser,
+      pass: smtpPass,
+    },
+  });
+
+  await transporter.sendMail({
+    from: `"WEARECAPA" <${smtpUser}>`,
+    to,
+    replyTo: `${name} <${email}>`,
+    subject: `Nueva consulta desde portfolio: ${name}`,
+    text: [
+      `Nombre: ${name}`,
+      `Email: ${email}`,
+      `Servicios: ${services.join(", ") || "No especificado"}`,
+      `Punto del proyecto: ${interest}`,
+      `Plazo: ${timeline || "No especificado"}`,
+      "",
+      message,
+    ].join("\n"),
+    html: `
+      <h2>Nueva consulta desde el portfolio</h2>
+      <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+      <p><strong>Punto del proyecto:</strong> ${escapeHtml(interest)}</p>
+      <p><strong>Plazo:</strong> ${escapeHtml(timeline || "No especificado")}</p>
+      <p><strong>Servicios:</strong></p>
+      <ul>${renderList(services)}</ul>
+      <p><strong>Contexto:</strong></p>
+      <p>${escapeHtml(message).replaceAll("\n", "<br />")}</p>
+    `,
+  });
+
+  return NextResponse.json({ message: "Mensaje enviado." });
+}
