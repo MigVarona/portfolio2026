@@ -307,7 +307,8 @@ export default function Home() {
       <section className="stack-section">
         <div className="section-heading">
           <p className="eyebrow">Stack</p>
-          <h2>Stack web moderno, ejecución orientada a producto.</h2>
+          <h2>Tecnología moderna, elegida según el proyecto.</h2>
+          <p>Usamos herramientas actuales para construir productos rápidos, escalables y fáciles de mantener.</p>
         </div>
         <div className="stack-list">
           {stack.map(([label, value]) => (
