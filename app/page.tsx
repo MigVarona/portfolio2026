@@ -166,11 +166,11 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow">Madrid · Web · SaaS · Dashboards · IA</p>
-          <h1>Productos digitales reales. No solo webs bonitas.</h1>
+          <h1>De la idea al producto. Sin rodeos.</h1>
           <p className="lead">
             Construimos webs, SaaS, dashboards e integraciones con IA que resuelven
-            problemas de negocio reales. Estrategia, diseño y desarrollo full-stack
-            en un solo equipo, desde la primera conversación hasta el lanzamiento.
+            problemas reales de negocio. Estrategia, diseño y desarrollo en un solo
+            equipo, desde la primera conversación hasta el lanzamiento.
           </p>
           <div className="actions">
             <MagneticButton className="button primary" href="#work" gaEvent="ver_proyectos" gaParams={{ location: "hero" }}>
@@ -185,11 +185,11 @@ export default function Home() {
 
         <aside className="hero-panel" aria-label="Resumen">
           <div className="hero-statement">
-            <p className="panel-kicker">Construimos. No decoramos.</p>
+            <p className="panel-kicker">Productos digitales reales. Más que webs bonitas.</p>
             <p>
-              Trabajamos con empresas que necesitan que algo funcione en producción,
-              no solo que se vea bien en una presentación. Producto real, decisiones
-              reales, lanzamiento real.
+              Trabajamos con empresas que necesitan que algo funcione en producción:
+              una plataforma, una web, un sistema interno o una herramienta preparada
+              para crecer.
             </p>
           </div>
 
