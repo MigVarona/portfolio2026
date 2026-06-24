@@ -185,11 +185,11 @@ export default function Home() {
 
         <aside className="hero-panel" aria-label="Resumen">
           <div className="hero-statement">
-            <p className="panel-kicker">Productos digitales reales. Más que webs bonitas.</p>
+            <p className="panel-kicker">Pensado para verse bien. Construido para funcionar.</p>
             <p>
-              Trabajamos con empresas que necesitan que algo funcione en producción:
-              una plataforma, una web, un sistema interno o una herramienta preparada
-              para crecer.
+              Diseñamos y desarrollamos productos digitales que combinan estética,
+              estrategia y tecnología: webs, plataformas, sistemas internos y
+              herramientas a medida.
             </p>
           </div>
 
