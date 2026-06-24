@@ -48,8 +48,8 @@ const projects = [
     image: "/images/amae/amae4.png",
     links: [
       {
-        label: "Premios AMAE",
-        href: "https://v0-amae-award-website.vercel.app/",
+        label: "premiosamae.com",
+        href: "https://www.premiosamae.com",
       },
     ],
     tone: "clay",
