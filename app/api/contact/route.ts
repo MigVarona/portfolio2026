@@ -69,7 +69,7 @@ export async function POST(request: Request) {
   const smtpHost = process.env.SMTP_HOST;
   const smtpPort = Number(process.env.SMTP_PORT || "465");
   const smtpUser = process.env.SMTP_USER;
-  const smtpPassword = process.env.SMTP_PASSWORD;
+  const smtpPassword = process.env.SMTP_PASSWORD || process.env.SMTP_PASS;
   const smtpSecure = process.env.SMTP_SECURE !== "false";
   const from = process.env.CONTACT_FROM || smtpUser;
   const to = process.env.CONTACT_TO || smtpUser;
