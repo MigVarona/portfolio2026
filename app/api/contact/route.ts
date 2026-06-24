@@ -66,11 +66,15 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "Introduce un email valido." }, { status: 400 });
   }
 
+  const smtpHost = process.env.SMTP_HOST;
+  const smtpPort = Number(process.env.SMTP_PORT || "465");
   const smtpUser = process.env.SMTP_USER;
-  const smtpPass = process.env.SMTP_PASS;
+  const smtpPassword = process.env.SMTP_PASSWORD;
+  const smtpSecure = process.env.SMTP_SECURE !== "false";
+  const from = process.env.CONTACT_FROM || smtpUser;
   const to = process.env.CONTACT_TO || smtpUser;
 
-  if (!smtpUser || !smtpPass || !to) {
+  if (!smtpHost || !smtpUser || !smtpPassword || !from || !to) {
     return NextResponse.json(
       { message: "El formulario no esta configurado para enviar emails todavia." },
       { status: 500 },
@@ -78,17 +82,17 @@ export async function POST(request: Request) {
   }
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.serviciodecorreo.es",
-    port: 465,
-    secure: true,
+    host: smtpHost,
+    port: smtpPort,
+    secure: smtpSecure,
     auth: {
       user: smtpUser,
-      pass: smtpPass,
+      pass: smtpPassword,
     },
   });
 
   await transporter.sendMail({
-    from: `"WEARECAPA" <${smtpUser}>`,
+    from: `"WEARECAPA" <${from}>`,
     to,
     replyTo: `${name} <${email}>`,
     subject: `Nueva consulta desde portfolio: ${name}`,
