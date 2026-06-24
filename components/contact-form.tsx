@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, type FormEvent } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const serviceOptions = [
   "Web corporativa o portfolio",
@@ -32,7 +32,7 @@ export function ContactForm() {
     }
   }, [submitState]);
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: { preventDefault(): void; currentTarget: HTMLFormElement }) {
     event.preventDefault();
     setSubmitState("sending");
     setFeedback("");
@@ -165,33 +165,18 @@ export function ContactForm() {
         </div>
       </fieldset>
 
-      <div className="form-grid">
-        <label>
-          <span>Presupuesto estimado</span>
-          <select name="budget" defaultValue="">
-            <option value="" disabled>
-              Selecciona una opcion
-            </option>
-            <option value="Menos de 2.000 EUR">Menos de 2.000 EUR</option>
-            <option value="2.000 - 5.000 EUR">2.000 - 5.000 EUR</option>
-            <option value="5.000 - 10.000 EUR">5.000 - 10.000 EUR</option>
-            <option value="Mas de 10.000 EUR">Mas de 10.000 EUR</option>
-            <option value="Prefiero comentarlo">Prefiero comentarlo</option>
-          </select>
-        </label>
-        <label>
-          <span>Plazo ideal</span>
-          <select name="timeline" defaultValue="">
-            <option value="" disabled>
-              Selecciona una opcion
-            </option>
-            <option value="Cuanto antes">Cuanto antes</option>
-            <option value="1-2 meses">1-2 meses</option>
-            <option value="3-6 meses">3-6 meses</option>
-            <option value="Sin fecha cerrada">Sin fecha cerrada</option>
-          </select>
-        </label>
-      </div>
+      <label>
+        <span>Plazo ideal</span>
+        <select name="timeline" defaultValue="">
+          <option value="" disabled>
+            Selecciona una opcion
+          </option>
+          <option value="Cuanto antes">Cuanto antes</option>
+          <option value="1-2 meses">1-2 meses</option>
+          <option value="3-6 meses">3-6 meses</option>
+          <option value="Sin fecha cerrada">Sin fecha cerrada</option>
+        </select>
+      </label>
 
       <label>
         <span>Cuentame el contexto</span>
