@@ -137,9 +137,9 @@ const processSteps = [
 ];
 
 const heroPrinciples = [
-  { value: "Producto", label: "antes que acumulación de pantallas" },
-  { value: "Criterio", label: "para decidir que construir y que dejar fuera" },
-  { value: "Continuidad", label: "desde la idea hasta el lanzamiento" },
+  { value: "Real", label: "producción, clientes, métricas que importan" },
+  { value: "Preciso", label: "decidimos qué construir y qué dejar fuera" },
+  { value: "Completo", label: "diseño, código y lanzamiento en un equipo" },
 ];
 
 const stack = [
@@ -165,12 +165,12 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Web · SaaS · Dashboards · Integraciones</p>
-          <h1>Producto digital con criterio, listo para crecer.</h1>
+          <p className="eyebrow">Madrid · Web · SaaS · Dashboards · IA</p>
+          <h1>Productos digitales reales. No solo webs bonitas.</h1>
           <p className="lead">
-            Diseñamos y desarrollamos productos digitales a medida: webs, plataformas y
-            sistemas que resuelven problemas reales con una mezcla cuidada de estrategia,
-            interfaz y desarrollo full-stack.
+            Construimos webs, SaaS, dashboards e integraciones con IA que resuelven
+            problemas de negocio reales. Estrategia, diseño y desarrollo full-stack
+            en un solo equipo, desde la primera conversación hasta el lanzamiento.
           </p>
           <div className="actions">
             <MagneticButton className="button primary" href="#work" gaEvent="ver_proyectos" gaParams={{ location: "hero" }}>
@@ -185,10 +185,11 @@ export default function Home() {
 
         <aside className="hero-panel" aria-label="Resumen">
           <div className="hero-statement">
-            <p className="panel-kicker">Menos ruido. Mejor producto.</p>
+            <p className="panel-kicker">Construimos. No decoramos.</p>
             <p>
-              Trabajamos con equipos y negocios que necesitan convertir una necesidad
-              concreta en una experiencia digital clara, usable y lista para operar.
+              Trabajamos con empresas que necesitan que algo funcione en producción,
+              no solo que se vea bien en una presentación. Producto real, decisiones
+              reales, lanzamiento real.
             </p>
           </div>
 
