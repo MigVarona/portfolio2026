@@ -9,9 +9,9 @@ const projects = [
     name: "Bookarta",
     type: "SaaS para restaurantes / producto propio",
     summary:
-      "SaaS B2B para restaurantes con cartas QR dinamicas, reservas online, dashboard de gestion, pagos y extraccion de menus con IA.",
+      "SaaS B2B para restaurantes con cartas QR dinámicas, reservas online, dashboard de gestión, pagos y extracción de menús con IA.",
     decision:
-      "Del concepto a un SaaS en produccion con clientes activos: carta QR, reservas, pagos y panel centralizado. Lanzado en España y Europa con ingresos recurrentes desde el primer mes.",
+      "Del concepto a un SaaS en producción con clientes activos: carta QR, reservas, pagos y panel centralizado. Lanzado en España y Europa con ingresos recurrentes desde el primer mes.",
     stack: "Next.js 16 · Supabase · Stripe · OpenAI · TypeScript",
     tags: ["SaaS", "Pagos", "IA"],
     image: "/images/bookarta/bookarta.png",
@@ -26,7 +26,7 @@ const projects = [
     name: "RENEW",
     type: "Plataforma editorial de salud",
     summary:
-      "Plataforma editorial sobre salud basada en evidencia: nutricion, neurociencia, longevidad, newsletter y guias descargables.",
+      "Plataforma editorial sobre salud basada en evidencia: nutrición, neurociencia, longevidad, newsletter y guías descargables.",
     decision:
       "Construida para monetizar: arquitectura orientada a conversión con marketing de afiliados y Google Ads como motores de ingresos.",
     stack: "Next.js 15 · MongoDB · TypeScript · shadcn/ui · Tailwind",
@@ -40,9 +40,9 @@ const projects = [
     name: "II Premios AMAE",
     type: "Plataforma institucional / sistema de premios",
     summary:
-      "Plataforma para premios audiovisuales con inscripciones publicas, dashboard de revision y portal de votacion para socios.",
+      "Plataforma para premios audiovisuales con inscripciones públicas, dashboard de revisión y portal de votación para socios.",
     decision:
-      "El reto: tres roles distintos —publico general, equipo de revision y socios votantes— con accesos separados y flujos independientes, todo en un solo sistema sin duplicar complejidad tecnica.",
+      "El reto: tres roles distintos —público general, equipo de revisión y socios votantes— con accesos separados y flujos independientes, todo en un solo sistema sin duplicar complejidad técnica.",
     stack: "Next.js · Supabase · TypeScript",
     tags: ["Institucional", "Votaciones", "Admin"],
     image: "/images/amae/amae4.png",
@@ -56,14 +56,14 @@ const projects = [
   },
   {
     number: "04",
-    name: "Cristina Gomez",
+    name: "Cristina Gómez",
     type: "Portfolio creativo",
     summary:
-      "Portfolio para editora de video con trabajos para Prime Video, Domestika y Bitvavo. Direccion visual oscura y cinematografica.",
+      "Portfolio para editora de video con trabajos para Prime Video, Domestika y Bitvavo. Dirección visual oscura y cinematográfica.",
     decision:
-      "Una presencia visual que diferencia a la editora del resto: ritmo, foco en la pieza y sensacion cinematografica. No una plantilla.",
+      "Una presencia visual que diferencia a la editora del resto: ritmo, foco en la pieza y sensación cinematográfica. No una plantilla.",
     stack: "Next.js 16 · TypeScript · shadcn/ui",
-    tags: ["Portfolio", "Visual", "Cinematico"],
+    tags: ["Portfolio", "Visual", "Cinemático"],
     image: "/images/crisgova/crisgova.png",
     links: [{ label: "crisgova.org", href: "https://www.crisgova.org/" }],
     tone: "ink",
@@ -75,13 +75,13 @@ const services = [
     number: "01",
     name: "Web de negocio",
     description:
-      "Para ordenar la presencia digital de una marca, explicar mejor lo que vende y convertir visitas en conversaciones utiles.",
+      "Para ordenar la presencia digital de una marca, explicar mejor lo que vende y convertir visitas en conversaciones útiles.",
     outcomes: [
       "Narrativa, estructura y direccion visual",
       "Web responsive con rendimiento cuidado",
-      "Formularios, analitica, CMS o integraciones basicas",
+      "Formularios, analítica, CMS o integraciones básicas",
     ],
-    fit: "Cuando necesitas una web que trabaje mejor para el negocio, no solo una pagina bonita.",
+    fit: "Cuando necesitas una web que trabaje mejor para el negocio, no solo una página bonita.",
   },
   {
     number: "02",
@@ -89,11 +89,11 @@ const services = [
     description:
       "Para convertir un proceso, servicio o idea de producto en una herramienta usable por clientes, equipos o usuarios internos.",
     outcomes: [
-      "Definicion de alcance y flujos principales",
+      "Definición de alcance y flujos principales",
       "Frontend, backend, base de datos y roles",
-      "Pagos, reservas, dashboards o areas privadas",
+      "Pagos, reservas, dashboards o áreas privadas",
     ],
-    fit: "Cuando el valor esta en resolver bien un flujo completo, con producto y tecnologia trabajando juntos.",
+    fit: "Cuando el valor está en resolver bien un flujo completo, con producto y tecnología trabajando juntos.",
   },
   {
     number: "03",
@@ -101,11 +101,11 @@ const services = [
     description:
       "Para mejorar un sistema que ya existe: conectar herramientas, automatizar partes repetitivas o incorporar IA donde tenga sentido.",
     outcomes: [
-      "Analisis del sistema actual",
-      "Alcance acotado y plan de implementacion",
-      "Entrega documentada y facil de mantener",
+      "Análisis del sistema actual",
+      "Alcance acotado y plan de implementación",
+      "Entrega documentada y fácil de mantener",
     ],
-    fit: "Cuando no hace falta rehacerlo todo, sino intervenir con precision.",
+    fit: "Cuando no hace falta rehacerlo todo, sino intervenir con precisión.",
   },
 ];
 
@@ -114,7 +114,7 @@ const processSteps = [
     number: "01",
     title: "Contexto",
     description:
-      "Entendemos que quieres resolver, para quien, que existe ya y que restricciones reales hay alrededor del proyecto.",
+      "Entendemos qué quieres resolver, para quién, qué existe ya y qué restricciones reales hay alrededor del proyecto.",
   },
   {
     number: "02",
@@ -124,7 +124,7 @@ const processSteps = [
   },
   {
     number: "03",
-    title: "Construccion",
+    title: "Construcción",
     description:
       "Diseñamos y desarrollamos con revisiones sobre producto real, manteniendo el foco en decisiones de negocio y experiencia de usuario.",
   },
@@ -132,12 +132,12 @@ const processSteps = [
     number: "04",
     title: "Salida",
     description:
-      "Dejamos el producto desplegado, medible y preparado para evolucionar: dominio, entornos, documentacion y soporte inicial.",
+      "Dejamos el producto desplegado, medible y preparado para evolucionar: dominio, entornos, documentación y soporte inicial.",
   },
 ];
 
 const heroPrinciples = [
-  { value: "Producto", label: "antes que acumulacion de pantallas" },
+  { value: "Producto", label: "antes que acumulación de pantallas" },
   { value: "Criterio", label: "para decidir que construir y que dejar fuera" },
   { value: "Continuidad", label: "desde la idea hasta el lanzamiento" },
 ];
@@ -206,7 +206,7 @@ export default function Home() {
       <section className="work" id="work">
         <div className="section-heading">
           <p className="eyebrow">Casos de producto</p>
-          <h2>Productos digitales llevados a produccion.</h2>
+          <h2>Productos digitales llevados a producción.</h2>
           <p>
             SaaS, plataformas editoriales, sistemas institucionales y portfolios
             construidos con foco en negocio, experiencia de usuario y desarrollo
@@ -256,7 +256,7 @@ export default function Home() {
           <h2>El tipo de ayuda depende del problema.</h2>
           <p>
             No todo necesita el mismo proceso ni el mismo nivel de producto. Primero
-            entendemos el contexto; despues definimos una propuesta proporcionada al
+            entendemos el contexto; después definimos una propuesta proporcionada al
             objetivo, al equipo y al momento del negocio.
           </p>
         </div>
@@ -290,7 +290,7 @@ export default function Home() {
           <h2>Un proceso claro, sin teatralizarlo.</h2>
           <p>
             El objetivo no es correr por correr. Es tomar buenas decisiones pronto,
-            construir con foco y que cada fase deje algo util para la siguiente.
+            construir con foco y que cada fase deje algo útil para la siguiente.
           </p>
         </div>
         <div className="process-list">
@@ -307,7 +307,7 @@ export default function Home() {
       <section className="stack-section">
         <div className="section-heading">
           <p className="eyebrow">Stack</p>
-          <h2>Stack web moderno, ejecucion orientada a producto.</h2>
+          <h2>Stack web moderno, ejecución orientada a producto.</h2>
         </div>
         <div className="stack-list">
           {stack.map(([label, value]) => (
@@ -325,15 +325,15 @@ export default function Home() {
             <img src="/images/logos/wearecapa_logo_horizontal_negative.svg" alt="WEARECAPA" className="footer-logo" />
           </div>
           <p className="footer-eyebrow">Listo para empezar</p>
-          <h2>Cuentanos tu proyecto. Te devolvemos una propuesta clara.</h2>
-          <p>Web, SaaS, dashboard, plataforma o integracion a medida. Sin compromiso inicial.</p>
+          <h2>Cuéntanos tu proyecto. Te devolvemos una propuesta clara.</h2>
+          <p>Web, SaaS, dashboard, plataforma o integración a medida. Sin compromiso inicial.</p>
           <div className="contact-links" aria-label="Contacto directo">
             <a href="mailto:hola@wearecapa.es">
               <span>Email</span>
               <strong>hola@wearecapa.es</strong>
             </a>
             <a href="tel:+34652592293">
-              <span>Telefono</span>
+              <span>Teléfono</span>
               <strong>+34 652 592 293</strong>
             </a>
           </div>

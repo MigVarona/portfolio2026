@@ -13,9 +13,9 @@ const serviceOptions = [
 
 const interestOptions = [
   "Tengo una idea y necesito darle forma",
-  "Necesito lanzar una primera version",
+  "Necesito lanzar una primera versión",
   "Quiero mejorar algo que ya existe",
-  "Busco apoyo tecnico para mi equipo",
+  "Busco apoyo técnico para mi equipo",
 ];
 
 type SubmitState = "idle" | "sending" | "success" | "error";
@@ -117,7 +117,7 @@ export function ContactForm() {
           <span>Servicio principal</span>
           <select name="services" defaultValue="">
             <option value="" disabled>
-              Selecciona una opcion
+              Selecciona una opción
             </option>
             {serviceOptions.map((service) => (
               <option key={service} value={service}>
@@ -127,10 +127,10 @@ export function ContactForm() {
           </select>
         </label>
         <label>
-          <span>En que punto estas</span>
+          <span>En qué punto estás</span>
           <select name="interest" defaultValue="">
             <option value="" disabled>
-              Selecciona una opcion
+              Selecciona una opción
             </option>
             {interestOptions.map((interest) => (
               <option key={interest} value={interest}>
@@ -154,7 +154,7 @@ export function ContactForm() {
       </fieldset>
 
       <fieldset className="choice-fieldset">
-        <legend>En que punto estas</legend>
+        <legend>En qué punto estás</legend>
         <div className="radio-grid">
           {interestOptions.map((interest) => (
             <label className="radio-option" key={interest}>
@@ -179,11 +179,11 @@ export function ContactForm() {
       </label>
 
       <label>
-        <span>Cuentame el contexto</span>
+        <span>Cuéntame el contexto</span>
         <textarea
           name="message"
           rows={6}
-          placeholder="Que necesitas construir, para quien es y que seria un buen resultado."
+          placeholder="Qué necesitas construir, para quién es y qué sería un buen resultado."
           required
         />
       </label>
