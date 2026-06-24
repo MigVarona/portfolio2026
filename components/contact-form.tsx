@@ -112,49 +112,22 @@ export function ContactForm() {
         <input name="company" type="text" autoComplete="organization" />
       </label>
 
-      <div className="mobile-form-controls">
-        <label>
-          <span>Servicio principal</span>
-          <select name="services" defaultValue="">
-            <option value="" disabled>
-              Selecciona una opción
-            </option>
-            {serviceOptions.map((service) => (
-              <option key={service} value={service}>
-                {service}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          <span>En qué punto estás</span>
-          <select name="interest" defaultValue="">
-            <option value="" disabled>
-              Selecciona una opción
-            </option>
-            {interestOptions.map((interest) => (
-              <option key={interest} value={interest}>
-                {interest}
-              </option>
-            ))}
-          </select>
-        </label>
-      </div>
-
-      <fieldset className="choice-fieldset">
-        <legend>Servicios que te interesan</legend>
-        <div className="option-grid">
+      <label>
+        <span>¿Qué necesitas?</span>
+        <select name="services" defaultValue="">
+          <option value="" disabled>
+            Selecciona una opción
+          </option>
           {serviceOptions.map((service) => (
-            <label className="check-option" key={service}>
-              <input name="services" type="checkbox" value={service} />
-              <span>{service}</span>
-            </label>
+            <option key={service} value={service}>
+              {service}
+            </option>
           ))}
-        </div>
-      </fieldset>
+        </select>
+      </label>
 
       <fieldset className="choice-fieldset">
-        <legend>En qué punto estás</legend>
+        <legend>¿En qué punto estás?</legend>
         <div className="radio-grid">
           {interestOptions.map((interest) => (
             <label className="radio-option" key={interest}>
@@ -166,23 +139,10 @@ export function ContactForm() {
       </fieldset>
 
       <label>
-        <span>Plazo ideal</span>
-        <select name="timeline" defaultValue="">
-          <option value="" disabled>
-            Selecciona una opcion
-          </option>
-          <option value="Cuanto antes">Cuanto antes</option>
-          <option value="1-2 meses">1-2 meses</option>
-          <option value="3-6 meses">3-6 meses</option>
-          <option value="Sin fecha cerrada">Sin fecha cerrada</option>
-        </select>
-      </label>
-
-      <label>
-        <span>Cuéntame el contexto</span>
+        <span>Mensaje</span>
         <textarea
           name="message"
-          rows={6}
+          rows={5}
           placeholder="Qué necesitas construir, para quién es y qué sería un buen resultado."
           required
         />
@@ -195,7 +155,7 @@ export function ContactForm() {
 
       <div className="form-footer">
         <button className="button primary" type="submit" disabled={submitState === "sending"}>
-          {submitState === "sending" ? "Enviando..." : "Enviar consulta"}
+          {submitState === "sending" ? "Enviando..." : "Enviar proyecto"}
         </button>
         <p className={`form-feedback ${submitState === "error" ? "is-error" : ""}`} role="status">
           {feedback}
